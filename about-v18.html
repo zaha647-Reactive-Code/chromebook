@@ -453,6 +453,11 @@ footer li a:hover{color:var(--rose-deep)}
 .serve-text li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rose);flex:none}
 @media(max-width:860px){.serve-row,.serve-row.flip{grid-template-columns:1fr}.serve-row.flip .serve-media{order:0}.serve-text{padding:28px}}
 </style>
+<style>
+.cta-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+@media(max-width:560px){.cta-btns{flex-direction:column;align-items:stretch}
+  .cta-btns .btn{justify-content:center}}
+</style>
 </head>
 <body>
 
@@ -603,8 +608,11 @@ footer li a:hover{color:var(--rose-deep)}
     <div class="cta-panel rv">
       <div class="cta-left">
         <h2>Ready to explore <span class="accent">our products?</span></h2>
-        <p>Genuine devices, official warranty, free delivery. Find the right Chromebook for your classroom, office, or home.</p>
-        <a class="btn btn-rose" href="https://mychromebook.pk/shop/">Go to shop <span class="arrow-c">↗</span></a>
+        <p>Genuine devices, official warranty, free delivery. Find the right Chromebook for your classroom, office, or home &#8212; or book a free demo and let our team match the right device to your needs.</p>
+        <div class="cta-btns">
+          <a class="btn btn-rose" href="shop-v18.html">Go to shop <span class="arrow-c">↗</span></a>
+          <a class="btn btn-metal" href="contact-v18.html?topic=demo">Book a Demo</a>
+        </div>
       </div>
       <div class="cta-right"><img src="assets/lenovo-500e-grey.jpg" alt="Grey Chromebook" style="border-radius:22px"></div>
     </div>

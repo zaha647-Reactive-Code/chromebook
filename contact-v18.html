@@ -489,6 +489,10 @@ footer li a:hover{color:var(--rose-deep)}
 .ct-demo p{font-size:14px;color:#5A5D68;line-height:1.65;margin-bottom:18px}
 @media(max-width:900px){.ct-grid{grid-template-columns:1fr}.ct-row{grid-template-columns:1fr}.ct-card{padding:26px}}
 </style>
+<style>
+.ct-demo-note{font-size:13px;color:var(--rose-deep);background:var(--rose-soft);
+  border-radius:14px;padding:11px 16px;margin:-8px 0 20px;line-height:1.55}
+</style>
 </head>
 <body>
 
@@ -539,6 +543,7 @@ footer li a:hover{color:var(--rose-deep)}
       <div class="ct-card rv">
         <h3>Send us a message</h3>
         <p class="ct-sub">Fill in the form below and your email app will open with everything ready to send.</p>
+        <p class="ct-demo-note" id="ctDemoNote" style="display:none">Booking a demo &#8212; we have selected that for you below. Just add your details.</p>
         <form id="ctForm">
           <div class="ct-row">
             <div class="ct-field">
@@ -753,11 +758,24 @@ lb.addEventListener('click',e=>{if(e.target===lb){lb.classList.remove('open');lb
     var body='Name: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\nTopic: '+topic+'\n\n'+msg;
     window.location.href='mailto:info@mychromebook.pk?subject='+encodeURIComponent('['+topic+'] Website enquiry from '+name)+'&body='+encodeURIComponent(body);
   });
+  var pickDemo=function(scroll){
+    var t=document.getElementById('ctTopic');
+    if(t) t.value='Book a demo';
+    var card=document.getElementById('ctForm');
+    if(scroll&&card){
+      card.scrollIntoView({behavior:'smooth',block:'center'});
+      setTimeout(function(){document.getElementById('ctName').focus();},600);
+    }
+  };
   var d=document.getElementById('ctDemoBtn');
-  if(d) d.addEventListener('click',function(){
-    document.getElementById('ctTopic').value='Book a demo';
-    document.getElementById('ctName').focus();
-  });
+  if(d) d.addEventListener('click',function(){pickDemo(true);});
+
+  /* arriving from the About page button: contact-v18.html?topic=demo */
+  if(new URLSearchParams(location.search).get('topic')==='demo'){
+    pickDemo(false);
+    var h=document.getElementById('ctDemoNote');
+    if(h) h.style.display='';
+  }
 })();
 </script>
 </body>
