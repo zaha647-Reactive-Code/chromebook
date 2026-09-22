@@ -360,6 +360,28 @@ footer li a:hover{color:var(--rose-deep)}
   .rail-card{width:270px;height:360px}
 }
 </style>
+
+<style>
+/* ---- "Just in" marketing tag — only on hand-picked products ---- */
+.b-newpill{position:absolute;top:26px;left:26px;z-index:3;display:inline-flex;align-items:center;gap:6px;
+  font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;
+  background:linear-gradient(120deg,var(--rose-2),var(--rose-deep));
+  border-radius:999px;padding:7px 14px 7px 11px;overflow:hidden;
+  box-shadow:0 8px 20px rgba(183,110,121,.42),0 0 0 3px rgba(216,163,171,.18);
+  animation:npFloat 3.8s ease-in-out infinite}
+.b-newpill::after{content:"";position:absolute;top:0;left:-65%;width:45%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);
+  animation:npShine 3.8s ease-in-out infinite}
+.b-newpill svg{width:11px;height:11px;fill:#fff;flex:none;animation:npSpark 3.8s ease-in-out infinite}
+@keyframes npFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes npShine{0%{left:-65%}55%{left:125%}100%{left:125%}}
+@keyframes npSpark{0%,72%,100%{transform:scale(1);opacity:.9}80%{transform:scale(1.35);opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .b-newpill,.b-newpill::after,.b-newpill svg{animation:none}
+}
+/* the same tag on the product page, sitting on the main photo */
+.pd-stage .b-newpill{top:18px;left:18px}
+</style>
 </head>
 <body>
 
@@ -491,18 +513,18 @@ footer li a:hover{color:var(--rose-deep)}
           <span class="b-heart" title="Add to wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
           <div class="stage" data-stage>
             <img class="on" src="assets/samsung-chromebook-silver.jpg" alt="CTL Chromebook PX11EG — closed view">
-            <img src="assets/samsung-galaxy-go.jpg" alt="CTL Chromebook PX11EG — open view">
+            <a href="product-v18.html?id=ctl-chromebook-px11eg"><img src="assets/samsung-galaxy-go.jpg" alt="CTL Chromebook PX11EG — open view"></a>
             <img src="assets/samsung-2in1.jpg" alt="CTL Chromebook PX11EG — flip view">
             <div class="stage-dots"><i class="on"></i><i></i><i></i></div>
           </div>
         </div>
         <div class="b-body">
-          <h3>CTL Chromebook PX11EG</h3>
+          <h3><a href="product-v18.html?id=ctl-chromebook-px11eg" style="color:inherit">CTL Chromebook PX11EG</a></h3>
           <p class="desc">Steady, reliable performance for daily learning — from video lectures to research and writing. Boots in seconds, protects your work with built-in security, and manages its own updates silently in the background.</p>
           <div class="b-spec"><span>Intel N5100</span><span>4 GB RAM</span><span>32 GB eMMC</span><span>Updates till 2031</span></div>
           <div class="b-row">
             <span class="price-pill">₨ 90,000</span>
-            <a class="btn btn-rose btn-sm" href="https://mychromebook.pk/?add-to-cart=197">Add to cart <span class="arrow-c">↗</span></a>
+            <a class="btn btn-rose btn-sm" href="product-v18.html?id=ctl-chromebook-px11eg">View details <span class="arrow-c">↗</span></a>
           </div>
         </div>
       </article>
@@ -511,15 +533,15 @@ footer li a:hover{color:var(--rose-deep)}
         <div class="b-img">
           <span class="b-tagpill">EDUCATION</span>
           <span class="b-heart" title="Add to wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
-          <img src="assets/chromebook-rosegold.png" alt="Allied Chromebook 11">
+          <a href="product-v18.html?id=allied-chromebook-11"><img src="assets/chromebook-rosegold.png" alt="Allied Chromebook 11"></a>
         </div>
         <div class="b-body">
-          <h3>Allied Chromebook 11</h3>
+          <h3><a href="product-v18.html?id=allied-chromebook-11" style="color:inherit">Allied Chromebook 11</a></h3>
           <p class="desc">A dependable everyday partner for students and teachers — smooth, steady performance for classes and research.</p>
           <div class="b-spec"><span>Intel N5100</span><span>4 GB RAM</span></div>
           <div class="b-row">
             <span class="price-pill">₨ 105,000</span>
-            <a class="btn btn-rose btn-sm" href="https://mychromebook.pk/?add-to-cart=79">Add to cart</a>
+            <a class="btn btn-rose btn-sm" href="product-v18.html?id=allied-chromebook-11">View details</a>
           </div>
         </div>
       </article>
@@ -527,15 +549,15 @@ footer li a:hover{color:var(--rose-deep)}
         <div class="b-img">
           <span class="b-tagpill">LIGHTWEIGHT</span>
           <span class="b-heart" title="Add to wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
-          <img src="assets/laptop-silver-15.jpg" alt="Centerm Mars Series M610">
+          <a href="product-v18.html?id=centerm-mars-m610"><img src="assets/laptop-silver-15.jpg" alt="Centerm Mars Series M610"></a>
         </div>
         <div class="b-body">
-          <h3>Centerm Mars M610</h3>
+          <h3><a href="product-v18.html?id=centerm-mars-m610" style="color:inherit">Centerm Mars M610</a></h3>
           <p class="desc">Lightweight, affordable, and easy to use — seamless access to digital resources and collaborative tools.</p>
           <div class="b-spec"><span>ChromeOS</span><span>Lightweight</span></div>
           <div class="b-row">
             <span class="price-pill">₨ 95,000</span>
-            <a class="btn btn-rose btn-sm" href="https://mychromebook.pk/?add-to-cart=1139">Add to cart</a>
+            <a class="btn btn-rose btn-sm" href="product-v18.html?id=centerm-mars-m610">View details</a>
           </div>
         </div>
       </article>
@@ -543,15 +565,15 @@ footer li a:hover{color:var(--rose-deep)}
         <div class="b-img">
           <span class="b-tagpill">PREMIUM</span>
           <span class="b-heart" title="Add to wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
-          <img src="assets/chromebook-tent.jpg" alt="CTL Chromebook Plus">
+          <a href="shop-v18.html"><img src="assets/chromebook-tent.jpg" alt="CTL Chromebook Plus"></a>
         </div>
         <div class="b-body">
-          <h3>CTL Chromebook Plus</h3>
+          <h3><a href="shop-v18.html" style="color:inherit">CTL Chromebook Plus</a></h3>
           <p class="desc">The enterprise-grade option for power users — more performance, more comfort, the full Chromebook Plus experience.</p>
           <div class="b-spec"><span>Chromebook Plus</span><span>PX141GX</span></div>
           <div class="b-row">
             <span class="price-pill">₨ 170,000</span>
-            <a class="btn btn-rose btn-sm" href="https://mychromebook.pk/?add-to-cart=194">Add to cart</a>
+            <a class="btn btn-rose btn-sm" href="shop-v18.html">View details</a>
           </div>
         </div>
       </article>
@@ -559,15 +581,15 @@ footer li a:hover{color:var(--rose-deep)}
         <div class="b-img">
           <span class="b-tagpill">REFURBISHED</span>
           <span class="b-heart" title="Add to wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
-          <img src="assets/lenovo-500e-grey.jpg" alt="Refurbished CTL Chromebook NL71">
+          <a href="product-v18.html?id=ctl-chromebook-nl71"><img src="assets/lenovo-500e-grey.jpg" alt="Refurbished CTL Chromebook NL71"></a>
         </div>
         <div class="b-body">
-          <h3>CTL Chromebook NL71</h3>
+          <h3><a href="product-v18.html?id=ctl-chromebook-nl71" style="color:inherit">CTL Chromebook NL71</a></h3>
           <p class="desc">Certified refurbished with a 180° rotating camera — fully tested, verified, and budget-friendly.</p>
           <div class="b-spec"><span>Certified refurb</span><span>180° camera</span></div>
           <div class="b-row">
             <span class="price-pill">₨ 30,000</span>
-            <a class="btn btn-rose btn-sm" href="https://mychromebook.pk/?add-to-cart=202">Add to cart</a>
+            <a class="btn btn-rose btn-sm" href="product-v18.html?id=ctl-chromebook-nl71">View details</a>
           </div>
         </div>
       </article>

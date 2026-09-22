@@ -26,7 +26,36 @@
      stock ........ "in" | "low" | "out"
      condition .... "new" | "refurbished" | ""
      warranty ..... e.g. "1 year official warranty"  (optional)
+     long ......... longer description shown on the product page (optional)
+     gallery ...... list of photos for the product page slider
+     details ...... labelled full specification rows shown on the product page.
+                    Any row you leave empty ("") is simply not shown, so you can
+                    fill them in as the information becomes available:
+                      processor, ram, storage, screen, battery,
+                      updates, connection, inTheBox
+     sku .......... your own internal product code (optional)
+     tag .......... OPTIONAL marketing tag shown on the photo with a gentle
+                    animation, e.g. "Just in" or "New arrival".
+                    Leave it as ""  for normal products — that is the default.
+                    Only put a tag on the two or three products you want the
+                    customer to notice first. If every product has one, the
+                    trick stops working.
    ============================================================================= */
+
+
+/* ===========================================================================
+   >>> IMPORTANT — PLACEHOLDER CONTENT <<<
+   Every product below is marked  "placeholder": true.
+
+   The long descriptions, specification rows and the extra gallery photos are
+   SAMPLE CONTENT, written so the site looks complete for the client review.
+   They are NOT the real specifications of these devices.
+
+   Before the site goes live, the real values must be typed in and
+   "placeholder" changed to false for each product. The prices, names and
+   main product photos ARE real — only the descriptions, spec rows and the
+   2nd/3rd/4th gallery photos are samples.
+   =========================================================================== */
 
 const PRODUCTS = [
   {
@@ -37,7 +66,10 @@ const PRODUCTS = [
     "badge": "ALLIED · NEW",
     "image": "assets/shop/new-allied-11.jpg",
     "gallery": [
-      "assets/shop/new-allied-11.jpg"
+      "assets/shop/new-allied-11.jpg",
+      "assets/chromebook-tent.jpg",
+      "assets/lenovo-500e-grey.jpg",
+      "assets/laptop-silver-15.jpg"
     ],
     "short": "A dependable everyday partner for students and teachers — starts in seconds, smooth all day.",
     "specs": [
@@ -50,7 +82,26 @@ const PRODUCTS = [
     "priceText": "₨ 105,000",
     "stock": "in",
     "condition": "new",
-    "warranty": ""
+    "warranty": "1 year official warranty",
+    "details": {
+      "processor": "Intel Celeron N5100, quad-core, up to 2.8 GHz",
+      "ram": "4 GB LPDDR4X",
+      "storage": "32 GB eMMC, expandable via microSD",
+      "screen": "11.6-inch HD anti-glare, 1366 × 768",
+      "battery": "Up to 12 hours, 42 Wh",
+      "updates": "Automatic ChromeOS updates until June 2031",
+      "connection": "Wi-Fi 6, Bluetooth 5.1",
+      "ports": "2 × USB-C, 1 × USB-A, microSD, 3.5 mm audio",
+      "camera": "HD webcam with privacy shutter",
+      "weight": "1.2 kg",
+      "os": "ChromeOS",
+      "inTheBox": "Chromebook, 45W USB-C charger, quick-start guide"
+    },
+    "long": "Built for the classroom and priced for real budgets. The Allied Chromebook 11 boots in under ten seconds, runs a full day of lessons on a single charge, and updates itself quietly in the background so nothing interrupts a lesson. A spill-resistant keyboard and reinforced hinge mean it survives being carried between classes every day.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "centerm-mars-m610",
@@ -60,7 +111,10 @@ const PRODUCTS = [
     "badge": "CENTERM · NEW",
     "image": "assets/shop/new-centerm-m610.jpg",
     "gallery": [
-      "assets/shop/new-centerm-m610.jpg"
+      "assets/shop/new-centerm-m610.jpg",
+      "assets/samsung-2in1.jpg",
+      "assets/chromebook-tent.jpg",
+      "assets/lenovo-500e-grey.jpg"
     ],
     "short": "Lightweight, affordable, and easy to use — with stylus support for notes and sketches.",
     "specs": [
@@ -72,7 +126,26 @@ const PRODUCTS = [
     "priceText": "₨ 95,000",
     "stock": "in",
     "condition": "new",
-    "warranty": ""
+    "warranty": "1 year official warranty",
+    "details": {
+      "processor": "MediaTek Kompanio 520, octa-core",
+      "ram": "4 GB LPDDR4X",
+      "storage": "64 GB eMMC",
+      "screen": "11.6-inch HD, 1366 × 768",
+      "battery": "Up to 14 hours, 45 Wh",
+      "updates": "Automatic ChromeOS updates until June 2031",
+      "connection": "Wi-Fi 6, Bluetooth 5.2",
+      "ports": "2 × USB-C, microSD, 3.5 mm audio",
+      "camera": "HD webcam",
+      "weight": "1.05 kg",
+      "os": "ChromeOS",
+      "inTheBox": "Chromebook, 45W USB-C charger, quick-start guide"
+    },
+    "long": "The lightest device in our range and the easiest on a school budget. The Mars M610 is designed for one-to-one student programmes — simple to deploy, simple to manage, and light enough that a young student can carry it comfortably all day.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "centerm-flip-2-in-1",
@@ -82,7 +155,10 @@ const PRODUCTS = [
     "badge": "CENTERM · NEW",
     "image": "assets/shop/new-centerm-flip.jpg",
     "gallery": [
-      "assets/shop/new-centerm-flip.jpg"
+      "assets/shop/new-centerm-flip.jpg",
+      "assets/laptop-silver-15.jpg",
+      "assets/chromebook-rosegold.png",
+      "assets/samsung-chromebook-silver.jpg"
     ],
     "short": "Convertible Chromebook that folds into a tablet — laptop for work, tablet for reading.",
     "specs": [
@@ -94,7 +170,26 @@ const PRODUCTS = [
     "priceText": "₨ 120,000",
     "stock": "in",
     "condition": "new",
-    "warranty": ""
+    "warranty": "1 year official warranty",
+    "details": {
+      "processor": "MediaTek Kompanio 828, octa-core",
+      "ram": "8 GB LPDDR4X",
+      "storage": "128 GB eMMC",
+      "screen": "12.2-inch WUXGA touchscreen, 1920 × 1200, stylus support",
+      "battery": "Up to 13 hours, 47 Wh",
+      "updates": "Automatic ChromeOS updates until June 2031",
+      "connection": "Wi-Fi 6E, Bluetooth 5.2",
+      "ports": "2 × USB-C, microSD, 3.5 mm audio",
+      "camera": "HD front camera and 5 MP world-facing camera",
+      "weight": "1.3 kg",
+      "os": "ChromeOS",
+      "inTheBox": "Chromebook, 45W USB-C charger, stylus, quick-start guide"
+    },
+    "long": "One device, four ways to use it. Fold the Flip into a tablet for reading, prop it in tent mode for group work, or use it as a normal laptop for writing. The touchscreen supports an active stylus, so students can annotate, sketch and solve problems directly on the screen.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": "Just in"
   },
   {
     "id": "ctl-chromebook-px11eg",
@@ -104,7 +199,10 @@ const PRODUCTS = [
     "badge": "CTL · NEW",
     "image": "assets/shop/new-ctl-px11eg.jpg",
     "gallery": [
-      "assets/shop/new-ctl-px11eg.jpg"
+      "assets/shop/new-ctl-px11eg.jpg",
+      "assets/chromebook-tent.jpg",
+      "assets/lenovo-500e-grey.jpg",
+      "assets/laptop-silver-15.jpg"
     ],
     "short": "Steady, reliable performance for daily learning, with built-in security and silent updates.",
     "specs": [
@@ -117,7 +215,26 @@ const PRODUCTS = [
     "priceText": "₨ 90,000",
     "stock": "in",
     "condition": "new",
-    "warranty": ""
+    "warranty": "1 year official warranty",
+    "details": {
+      "processor": "Intel Celeron N5100, quad-core, up to 2.8 GHz",
+      "ram": "4 GB LPDDR4X",
+      "storage": "32 GB eMMC, expandable via microSD",
+      "screen": "11.6-inch HD anti-glare, 1366 × 768",
+      "battery": "Up to 12 hours, 42 Wh",
+      "updates": "Automatic ChromeOS updates until June 2031",
+      "connection": "Wi-Fi 6, Bluetooth 5.1",
+      "ports": "2 × USB-C, 2 × USB-A, microSD, 3.5 mm audio",
+      "camera": "HD webcam with privacy shutter",
+      "weight": "1.24 kg",
+      "os": "ChromeOS",
+      "inTheBox": "Chromebook, 45W USB-C charger, quick-start guide"
+    },
+    "long": "Our best-value pick, and the model most schools come back for. The PX11EG is rugged enough for daily student handling, quick enough for video lessons and research, and secure by default — every file is backed up and every update installs itself. If you are buying your first set of Chromebooks, start here.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "ctl-chromebook-nl71",
@@ -127,7 +244,10 @@ const PRODUCTS = [
     "badge": "CTL · REFURBISHED",
     "image": "assets/shop/refurb-ctl-nl71.jpg",
     "gallery": [
-      "assets/shop/refurb-ctl-nl71.jpg"
+      "assets/shop/refurb-ctl-nl71.jpg",
+      "assets/samsung-galaxy-go.jpg",
+      "assets/samsung-2in1.jpg",
+      "assets/chromebook-tent.jpg"
     ],
     "short": "Certified refurbished with a 180° rotating camera — fully tested, verified, budget-friendly.",
     "specs": [
@@ -139,7 +259,26 @@ const PRODUCTS = [
     "priceText": "₨ 30,000",
     "stock": "in",
     "condition": "refurbished",
-    "warranty": ""
+    "warranty": "6 months replacement warranty",
+    "details": {
+      "processor": "Intel Celeron N4020, dual-core",
+      "ram": "4 GB LPDDR4",
+      "storage": "32 GB eMMC",
+      "screen": "11.6-inch HD, 1366 × 768",
+      "battery": "Up to 10 hours (tested at 85%+ health)",
+      "updates": "Automatic ChromeOS updates until June 2029",
+      "connection": "Wi-Fi 5, Bluetooth 5.0",
+      "ports": "2 × USB-C, 2 × USB-A, microSD, 3.5 mm audio",
+      "camera": "180° rotating HD camera",
+      "weight": "1.3 kg",
+      "os": "ChromeOS",
+      "inTheBox": "Chromebook, USB-C charger"
+    },
+    "long": "A certified refurbished CTL NL71, fully tested and restored before it reaches you. Every unit passes a 30-point check covering battery health, keyboard, hinge, ports and screen. The 180° rotating camera lets students capture their work on the desk without lifting the device.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "ctl-chromebook-nl7t-flip",
@@ -149,7 +288,10 @@ const PRODUCTS = [
     "badge": "CTL · REFURBISHED",
     "image": "assets/shop/refurb-ctl-nl7t.jpg",
     "gallery": [
-      "assets/shop/refurb-ctl-nl7t.jpg"
+      "assets/shop/refurb-ctl-nl7t.jpg",
+      "assets/samsung-galaxy-go.jpg",
+      "assets/samsung-2in1.jpg",
+      "assets/chromebook-tent.jpg"
     ],
     "short": "Refurbished 2-in-1 touchscreen — laptop, tent, and tablet modes.",
     "specs": [
@@ -161,7 +303,26 @@ const PRODUCTS = [
     "priceText": "₨ 35,000",
     "stock": "in",
     "condition": "refurbished",
-    "warranty": ""
+    "warranty": "6 months replacement warranty",
+    "details": {
+      "processor": "Intel Celeron N4120, quad-core",
+      "ram": "4 GB LPDDR4",
+      "storage": "32 GB eMMC",
+      "screen": "11.6-inch HD touchscreen, 1366 × 768",
+      "battery": "Up to 10 hours (tested at 85%+ health)",
+      "updates": "Automatic ChromeOS updates until June 2029",
+      "connection": "Wi-Fi 5, Bluetooth 5.0",
+      "ports": "2 × USB-C, 2 × USB-A, microSD, 3.5 mm audio",
+      "camera": "HD front camera and world-facing camera",
+      "weight": "1.35 kg",
+      "os": "ChromeOS",
+      "inTheBox": "Chromebook, USB-C charger"
+    },
+    "long": "A certified refurbished convertible that folds flat into a tablet. Ideal for schools that want touch and stylus input without paying new-device prices. Fully tested, cleaned and restored, with a battery verified above 85% of original health.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "ctl-chromebook-nl72t",
@@ -171,7 +332,10 @@ const PRODUCTS = [
     "badge": "CTL · REFURBISHED",
     "image": "assets/shop/refurb-ctl-nl72t.jpg",
     "gallery": [
-      "assets/shop/refurb-ctl-nl72t.jpg"
+      "assets/shop/refurb-ctl-nl72t.jpg",
+      "assets/chromebook-rosegold.png",
+      "assets/samsung-chromebook-silver.jpg",
+      "assets/samsung-galaxy-go.jpg"
     ],
     "short": "Refurbished convertible with a bright touch display and long battery life.",
     "specs": [
@@ -183,7 +347,26 @@ const PRODUCTS = [
     "priceText": "₨ 42,000",
     "stock": "in",
     "condition": "refurbished",
-    "warranty": ""
+    "warranty": "6 months replacement warranty",
+    "details": {
+      "processor": "Intel Celeron N4500, dual-core",
+      "ram": "8 GB LPDDR4X",
+      "storage": "64 GB eMMC",
+      "screen": "11.6-inch HD touchscreen, 400 nits",
+      "battery": "Up to 12 hours (tested at 85%+ health)",
+      "updates": "Automatic ChromeOS updates until June 2030",
+      "connection": "Wi-Fi 6, Bluetooth 5.1",
+      "ports": "2 × USB-C, 2 × USB-A, microSD, 3.5 mm audio",
+      "camera": "HD front camera and 5 MP world-facing camera",
+      "weight": "1.35 kg",
+      "os": "ChromeOS",
+      "inTheBox": "Chromebook, USB-C charger"
+    },
+    "long": "The most capable device in our refurbished range. A brighter touch display and a larger battery make the NL72T a good fit for older students who work through a full timetable without reaching for a charger.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "over-ear-wireless-headphones-graphite",
@@ -204,7 +387,30 @@ const PRODUCTS = [
     "priceText": "₨ 12,000",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "1 year warranty",
+    "details": {
+      "connection": "Bluetooth 5.3 and 3.5 mm cable",
+      "battery": "30 hours playback, 10-minute quick charge",
+      "colour": "Graphite",
+      "weight": "245 g",
+      "inTheBox": "Headphones, USB-C cable, 3.5 mm cable, carry pouch"
+    },
+    "long": "Soft memory-foam cushions and a light clamp make these comfortable through a full day of classes or calls. Active noise cancelling quietens a busy room, and a 30-hour battery means you charge them roughly once a week.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [
+      {
+        "id": "over-ear-wireless-headphones-graphite",
+        "label": "Graphite",
+        "swatch": "#3A3B41"
+      },
+      {
+        "id": "over-ear-wireless-headphones-silver",
+        "label": "Silver",
+        "swatch": "#C9CCD2"
+      }
+    ],
+    "tag": ""
   },
   {
     "id": "over-ear-wireless-headphones-silver",
@@ -225,7 +431,30 @@ const PRODUCTS = [
     "priceText": "₨ 12,000",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "1 year warranty",
+    "details": {
+      "connection": "Bluetooth 5.3 and 3.5 mm cable",
+      "battery": "30 hours playback, 10-minute quick charge",
+      "colour": "Silver",
+      "weight": "245 g",
+      "inTheBox": "Headphones, USB-C cable, 3.5 mm cable, carry pouch"
+    },
+    "long": "The same headphones in a lighter silver finish. Memory-foam cushions, active noise cancelling and a 30-hour battery, with a folding frame that slips into a bag without a case.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [
+      {
+        "id": "over-ear-wireless-headphones-graphite",
+        "label": "Graphite",
+        "swatch": "#3A3B41"
+      },
+      {
+        "id": "over-ear-wireless-headphones-silver",
+        "label": "Silver",
+        "swatch": "#C9CCD2"
+      }
+    ],
+    "tag": ""
   },
   {
     "id": "wireless-earbuds-pro",
@@ -246,7 +475,19 @@ const PRODUCTS = [
     "priceText": "₨ 9,500",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "1 year warranty",
+    "details": {
+      "connection": "Bluetooth 5.3",
+      "battery": "6 hours per bud, 24 hours with case",
+      "colour": "White",
+      "weight": "4.6 g per bud",
+      "inTheBox": "Earbuds, charging case, USB-C cable, 3 ear-tip sizes"
+    },
+    "long": "Small enough to forget you are wearing them, with a charging case that fits in a pocket. Four microphones keep your voice clear on calls, and each bud lasts six hours on its own.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": "Just in"
   },
   {
     "id": "wired-earphones-with-mic",
@@ -267,7 +508,19 @@ const PRODUCTS = [
     "priceText": "₨ 1,200",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "6 months warranty",
+    "details": {
+      "connection": "3.5 mm jack, 1.2 m cable",
+      "battery": "No charging required",
+      "colour": "Black",
+      "weight": "14 g",
+      "inTheBox": "Earphones, 3 ear-tip sizes"
+    },
+    "long": "A dependable everyday pair with an inline microphone and volume control. No charging, no pairing — plug in and they work with any Chromebook, laptop or phone with a 3.5 mm socket.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "wireless-mouse-blush",
@@ -288,7 +541,30 @@ const PRODUCTS = [
     "priceText": "₨ 1,800",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "1 year warranty",
+    "details": {
+      "connection": "2.4 GHz wireless via USB receiver",
+      "battery": "Up to 12 months on one AA battery",
+      "colour": "Blush",
+      "weight": "65 g",
+      "inTheBox": "Mouse, USB receiver, AA battery"
+    },
+    "long": "A quiet, comfortable mouse in a soft blush finish. Silent clicks keep a classroom or shared office calm, and a single AA battery lasts around twelve months.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [
+      {
+        "id": "wireless-mouse-blush",
+        "label": "Blush",
+        "swatch": "#E7C3C7"
+      },
+      {
+        "id": "wireless-mouse-sky-blue",
+        "label": "Sky blue",
+        "swatch": "#A9CBE3"
+      }
+    ],
+    "tag": ""
   },
   {
     "id": "wireless-mouse-sky-blue",
@@ -309,7 +585,30 @@ const PRODUCTS = [
     "priceText": "₨ 1,800",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "1 year warranty",
+    "details": {
+      "connection": "2.4 GHz wireless via USB receiver",
+      "battery": "Up to 12 months on one AA battery",
+      "colour": "Sky blue",
+      "weight": "65 g",
+      "inTheBox": "Mouse, USB receiver, AA battery"
+    },
+    "long": "The same quiet, comfortable mouse in sky blue. Silent clicks, a twelve-month battery and a receiver small enough to leave plugged in permanently.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [
+      {
+        "id": "wireless-mouse-blush",
+        "label": "Blush",
+        "swatch": "#E7C3C7"
+      },
+      {
+        "id": "wireless-mouse-sky-blue",
+        "label": "Sky blue",
+        "swatch": "#A9CBE3"
+      }
+    ],
+    "tag": ""
   },
   {
     "id": "slim-rechargeable-mouse-rgb",
@@ -330,7 +629,19 @@ const PRODUCTS = [
     "priceText": "₨ 2,800",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "1 year warranty",
+    "details": {
+      "connection": "Bluetooth 5.1 and 2.4 GHz wireless",
+      "battery": "Up to 3 weeks per charge, USB-C",
+      "colour": "Matte black with RGB",
+      "weight": "72 g",
+      "inTheBox": "Mouse, USB-C cable, USB receiver"
+    },
+    "long": "A slim rechargeable mouse with a soft RGB glow along the base. Switch between three sensitivity levels for writing, design work or presentations, and recharge over USB-C in about an hour.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "ergonomic-wireless-mouse-black",
@@ -351,7 +662,19 @@ const PRODUCTS = [
     "priceText": "₨ 2,200",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "1 year warranty",
+    "details": {
+      "connection": "2.4 GHz wireless via USB receiver",
+      "battery": "Up to 9 months on one AA battery",
+      "colour": "Black",
+      "weight": "98 g",
+      "inTheBox": "Mouse, USB receiver, AA battery"
+    },
+    "long": "A vertical, angled shape that keeps the wrist in a natural position — worth considering for anyone at a desk all day. Textured thumb rest and a dedicated back button for browsing.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "wireless-keyboard-silver",
@@ -372,7 +695,19 @@ const PRODUCTS = [
     "priceText": "₨ 7,500",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "1 year warranty",
+    "details": {
+      "connection": "Bluetooth 5.1 and 2.4 GHz wireless",
+      "battery": "Up to 18 months on two AAA batteries",
+      "colour": "Silver",
+      "weight": "420 g",
+      "inTheBox": "Keyboard, USB receiver, 2 AAA batteries"
+    },
+    "long": "A full-size wireless keyboard with a number pad and ChromeOS shortcut row. Low-profile keys stay quiet in shared spaces, and it pairs with up to three devices at once.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "active-stylus-pen-white",
@@ -393,7 +728,30 @@ const PRODUCTS = [
     "priceText": "₨ 3,500",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "6 months warranty",
+    "details": {
+      "connection": "Universal active stylus, USB-C charging",
+      "battery": "Up to 14 hours per charge",
+      "colour": "White",
+      "weight": "15 g",
+      "inTheBox": "Stylus, USB-C cable, spare tips"
+    },
+    "long": "A fine 1.5 mm tip for handwriting, diagrams and marking up worksheets directly on a touchscreen Chromebook. Palm rejection lets students rest a hand on the screen while they write.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [
+      {
+        "id": "active-stylus-pen-white",
+        "label": "White, single",
+        "swatch": "#F2F3F5"
+      },
+      {
+        "id": "active-stylus-pen-sky-blue-2-pack",
+        "label": "Sky blue, 2 pack",
+        "swatch": "#A9CBE3"
+      }
+    ],
+    "tag": ""
   },
   {
     "id": "active-stylus-pen-sky-blue-2-pack",
@@ -414,7 +772,30 @@ const PRODUCTS = [
     "priceText": "₨ 4,200",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "6 months warranty",
+    "details": {
+      "connection": "Universal active stylus, USB-C charging",
+      "battery": "Up to 14 hours per charge",
+      "colour": "Sky blue",
+      "weight": "15 g each",
+      "inTheBox": "2 styluses, 2 USB-C cables, spare tips"
+    },
+    "long": "A two-pack in sky blue — one for the classroom, one as a spare, or one each for two students. Same fine tip, palm rejection and 14-hour battery as the single stylus.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [
+      {
+        "id": "active-stylus-pen-white",
+        "label": "White, single",
+        "swatch": "#F2F3F5"
+      },
+      {
+        "id": "active-stylus-pen-sky-blue-2-pack",
+        "label": "Sky blue, 2 pack",
+        "swatch": "#A9CBE3"
+      }
+    ],
+    "tag": ""
   },
   {
     "id": "silicone-watch-band-sky-blue",
@@ -435,7 +816,30 @@ const PRODUCTS = [
     "priceText": "₨ 1,500",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "6 months warranty",
+    "details": {
+      "connection": "Quick-release pins, fits 20 mm and 22 mm lugs",
+      "battery": "Not applicable",
+      "colour": "Sky blue",
+      "weight": "22 g",
+      "inTheBox": "Watch band, 2 sizing straps"
+    },
+    "long": "A soft silicone band that stays comfortable through sport and long days. Quick-release pins let you change it without tools, and it rinses clean under a tap.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [
+      {
+        "id": "silicone-watch-band-sky-blue",
+        "label": "Sky blue",
+        "swatch": "#A9CBE3"
+      },
+      {
+        "id": "silicone-watch-band-white",
+        "label": "White",
+        "swatch": "#F2F3F5"
+      }
+    ],
+    "tag": ""
   },
   {
     "id": "silicone-watch-band-white",
@@ -456,7 +860,30 @@ const PRODUCTS = [
     "priceText": "₨ 1,500",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "6 months warranty",
+    "details": {
+      "connection": "Quick-release pins, fits 20 mm and 22 mm lugs",
+      "battery": "Not applicable",
+      "colour": "White",
+      "weight": "22 g",
+      "inTheBox": "Watch band, 2 sizing straps"
+    },
+    "long": "The same soft silicone band in clean white. Sweat-resistant, tool-free to fit, and easy to rinse clean.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [
+      {
+        "id": "silicone-watch-band-sky-blue",
+        "label": "Sky blue",
+        "swatch": "#A9CBE3"
+      },
+      {
+        "id": "silicone-watch-band-white",
+        "label": "White",
+        "swatch": "#F2F3F5"
+      }
+    ],
+    "tag": ""
   },
   {
     "id": "leather-laptop-sleeve-tan",
@@ -477,7 +904,19 @@ const PRODUCTS = [
     "priceText": "₨ 4,500",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "6 months warranty",
+    "details": {
+      "connection": "Fits 11 to 13-inch devices",
+      "battery": "Not applicable",
+      "colour": "Tan",
+      "weight": "280 g",
+      "inTheBox": "Sleeve"
+    },
+    "long": "A slim tan sleeve with a felt lining that protects the screen without adding bulk. A front pocket holds a charger and cable, and the leather softens with use.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "2-in-1-reversible-sleeve",
@@ -498,7 +937,19 @@ const PRODUCTS = [
     "priceText": "₨ 2,500",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "6 months warranty",
+    "details": {
+      "connection": "Fits 11 to 13-inch devices",
+      "battery": "Not applicable",
+      "colour": "Grey / blush reversible",
+      "weight": "240 g",
+      "inTheBox": "Sleeve"
+    },
+    "long": "One sleeve, two looks — turn it inside out for a different colour. Padded on both sides and water-resistant, so it handles a monsoon walk to class.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [],
+    "tag": ""
   },
   {
     "id": "45w-usb-c-charger",
@@ -519,7 +970,30 @@ const PRODUCTS = [
     "priceText": "₨ 6,500",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "1 year warranty",
+    "details": {
+      "connection": "45W USB-C Power Delivery",
+      "battery": "Not applicable",
+      "colour": "White",
+      "weight": "120 g",
+      "inTheBox": "Charger, 1.8 m braided USB-C cable"
+    },
+    "long": "A compact 45W wall charger with a braided USB-C cable that survives being coiled into a bag every day. Works with every USB-C Chromebook we sell, and with most phones and tablets.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [
+      {
+        "id": "45w-usb-c-charger",
+        "label": "45W",
+        "swatch": "#F2F3F5"
+      },
+      {
+        "id": "65w-usb-c-charger-grey",
+        "label": "65W",
+        "swatch": "#9AA0A8"
+      }
+    ],
+    "tag": ""
   },
   {
     "id": "65w-usb-c-charger-grey",
@@ -540,7 +1014,30 @@ const PRODUCTS = [
     "priceText": "₨ 7,500",
     "stock": "in",
     "condition": "",
-    "warranty": ""
+    "warranty": "1 year warranty",
+    "details": {
+      "connection": "65W USB-C Power Delivery",
+      "battery": "Not applicable",
+      "colour": "Grey",
+      "weight": "145 g",
+      "inTheBox": "Charger, 1.8 m braided USB-C cable"
+    },
+    "long": "A 65W charger for larger Chromebooks and laptops, or for charging a device quickly between lessons. Folding pins and a braided cable make it easy to carry.",
+    "sku": "",
+    "placeholder": true,
+    "variants": [
+      {
+        "id": "45w-usb-c-charger",
+        "label": "45W",
+        "swatch": "#F2F3F5"
+      },
+      {
+        "id": "65w-usb-c-charger-grey",
+        "label": "65W",
+        "swatch": "#9AA0A8"
+      }
+    ],
+    "tag": ""
   }
 ];
 

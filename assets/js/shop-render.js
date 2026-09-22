@@ -21,27 +21,33 @@
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   };
 
-  var stockPill = function (p) {
+  var SPARK = '<svg viewBox="0 0 24 24"><path d="M12 2l1.9 5.6L19.5 9l-4.6 3.4L16.3 18 12 14.9 7.7 18l1.4-5.6L4.5 9l5.6-1.4z"/></svg>';
+
+  /* Only stock warnings and the hand-picked "tag" appear on the photo.
+     The brand name is not repeated here — it is already in the title below. */
+  var photoPill = function (p) {
     if (p.stock === 'out') return '<span class="b-tagpill">SOLD OUT</span>';
     if (p.stock === 'low') return '<span class="b-tagpill">LOW STOCK</span>';
-    return p.badge ? '<span class="b-tagpill">' + esc(p.badge) + '</span>' : '';
+    if (p.tag)             return '<span class="b-newpill">' + SPARK + esc(p.tag) + '</span>';
+    return '';
   };
 
   var card = function (p, i) {
     var delay = ['', 'd1', 'd2', 'd3'][i % 4];
     var specs = (p.specs || []).map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('');
     var sold = p.stock === 'out';
+    var link = 'product-v18.html?id=' + encodeURIComponent(p.id);
     var btn = sold
       ? '<span class="btn btn-metal btn-sm">Sold out</span>'
-      : '<a class="btn btn-rose btn-sm" href="#">Add to cart</a>';
+      : '<a class="btn btn-rose btn-sm" href="' + link + '">View details</a>';
 
     return '' +
       '<article class="b-item rv ' + delay + '" data-cat="' + esc(p.category) + '" data-sub="' + esc(p.subcategory) + '" data-id="' + esc(p.id) + '">' +
-        '<div class="b-img">' + stockPill(p) + HEART +
-          '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '">' +
+        '<div class="b-img">' + photoPill(p) + HEART +
+          '<a href="' + link + '"><img src="' + esc(p.image) + '" alt="' + esc(p.name) + '"></a>' +
         '</div>' +
         '<div class="b-body">' +
-          '<h3>' + esc(p.name) + '</h3>' +
+          '<h3><a href="' + link + '" style="color:inherit">' + esc(p.name) + '</a></h3>' +
           '<p class="desc">' + esc(p.short) + '</p>' +
           '<div class="b-spec">' + specs + '</div>' +
           '<div class="b-row">' +
