@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="Guides, classroom stories and buying tips — everything about Chromebooks in Pakistan.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23D8A3AB'/%3E%3Cstop offset='.55' stop-color='%23C4838D'/%3E%3Cstop offset='1' stop-color='%23B4B9C3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='6' y='9' width='32' height='21' rx='4' fill='none' stroke='url%28%23g%29' stroke-width='3'/%3E%3Cpath d='M4 33.5h36' stroke='url%28%23g%29' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='22' cy='19.5' r='3.4' fill='url%28%23g%29'/%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkout — MyChromebook.pk</title>
+<title>Blog — MyChromebook.pk</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -360,65 +362,84 @@ footer li a:hover{color:var(--rose-deep)}
   .rail-card{width:270px;height:360px}
 }
 
-/* ============ SHOP page ============ */
-.sh-hero{padding:56px 24px 34px;text-align:center;background:
+/* ============ BLOG page ============ */
+.bl-hero{padding:56px 24px 0;text-align:center;overflow:hidden;background:
   radial-gradient(720px 430px at 12% 20%, var(--rose-glow), transparent 64%),
   radial-gradient(780px 500px at 90% 90%, rgba(190,196,206,.55), transparent 64%),
   linear-gradient(180deg,#F7F8FA 0%,#EDEFF2 60%,#E5E8EC 100%)}
-.sh-hero h1{font-size:clamp(34px,4.4vw,54px);margin:12px 0 10px;opacity:0;animation:riseIn .8s ease .2s forwards}
-.sh-hero p{color:#4B4D55;max-width:560px;margin:0 auto 26px;opacity:0;animation:riseIn .8s ease .35s forwards}
-.sh-hero .hero-kicker{opacity:0;animation:riseIn .8s ease .1s forwards}
-.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;opacity:0;animation:riseIn .8s ease .5s forwards}
-.filters .tab{padding:8px 18px}
-.subfilters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
-.subfilters .tab{padding:6px 14px;font-size:12.5px}
-.sh-sec{padding:70px 0}
-.sh-sec:nth-of-type(even){background:linear-gradient(180deg,var(--platinum),#E6E8EC)}
-.sh-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:30px;flex-wrap:wrap}
-.sh-head h2{font-size:clamp(26px,3.2vw,40px)}
-.sh-head p{color:#55575F;font-size:14.5px}
-.count{background:#fff;border-radius:999px;padding:6px 14px;font-size:12.5px;color:#55575F;box-shadow:var(--shadow)}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.grid4 .b-item .b-img{height:250px}
-.sh-sub{font-size:12px;letter-spacing:.14em;color:var(--rose-deep);font-weight:500;margin:34px 0 14px}
-.b-item.hide{display:none}
-.b-item.pop{animation:popIn .5s ease both}
-@keyframes popIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
-.sh-sec.hide{display:none}
-.b-item .b-body h3{font-size:16.5px}
-.b-item .desc{font-size:13px}
-@media(max-width:1080px){.grid4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:760px){.grid4{grid-template-columns:1fr}}
+.bl-hero h1{font-size:clamp(34px,4.4vw,54px);margin:12px 0 10px;opacity:0;animation:riseIn .8s ease .2s forwards}
+.bl-hero p{color:#4B4D55;max-width:560px;margin:0 auto 22px;opacity:0;animation:riseIn .8s ease .35s forwards}
+.bl-hero .hero-kicker{opacity:0;animation:riseIn .8s ease .1s forwards}
+.bl-search{max-width:520px;margin:0 auto 46px;opacity:0;animation:riseIn .8s ease .5s forwards}
+/* ---- the monitor ---- */
+.monitor{max-width:960px;margin:0 auto;opacity:0;animation:riseIn 1s cubic-bezier(.18,.8,.22,1) .6s forwards}
+.mon-bezel{background:linear-gradient(160deg,#2C2D33,#17181C);border-radius:26px;padding:16px;box-shadow:0 0 0 1px rgba(255,255,255,.08) inset,0 0 40px rgba(186,191,201,.5),0 40px 80px rgba(38,39,46,.35)}
+.screen{position:relative;background:#fff;border-radius:14px;height:520px;overflow:hidden;text-align:left}
+.mon-neck{width:150px;height:110px;margin:0 auto;background:linear-gradient(90deg,#C4C8D0,#F1F2F5 50%,#B8BCC5);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.mon-base{width:340px;height:14px;margin:0 auto;border-radius:0 0 10px 10px;background:linear-gradient(90deg,#B8BCC5,#F1F2F5 50%,#B8BCC5);box-shadow:0 10px 24px rgba(38,39,46,.25)}
+/* screen chrome */
+.s-top{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #EEF0F3;background:#FAFAFB}
+.s-top i{width:10px;height:10px;border-radius:50%;background:#DDE0E5}
+.s-url{flex:1;background:#fff;border:1px solid #EEF0F3;border-radius:999px;padding:5px 14px;font-size:12px;color:#77797F;text-align:center}
+.s-prog{position:absolute;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--rose-2),var(--rose-deep));z-index:5;transition:width .3s linear}
+.s-body{position:absolute;top:44px;left:0;right:0;bottom:0;overflow:hidden}
+.article{position:absolute;inset:0;padding:0 0 30px;overflow:hidden;opacity:0;transition:opacity .6s ease}
+.article.on{opacity:1}
+.a-inner{transition:transform 1.2s ease}
+.a-cover{height:230px;overflow:hidden;position:relative}
+.a-cover img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:kenburns 12s ease-in-out infinite alternate}
+.a-cover .cat{position:absolute;left:22px;bottom:16px;background:rgba(255,255,255,.9);border-radius:999px;padding:5px 13px;font-size:11px;letter-spacing:.1em;color:var(--rose-deep)}
+.a-text{padding:22px 34px 0;max-width:720px}
+.a-text h2{font-size:24px;margin-bottom:8px}
+.a-text .meta{font-size:12.5px;color:#77797F;margin-bottom:16px}
+.a-text p{font-size:14.5px;color:#3C3E45;margin-bottom:12px;opacity:0;transform:translateY(10px);transition:opacity .7s ease,transform .7s ease}
+.a-text p.show{opacity:1;transform:none}
+.a-text h2,.a-text .meta{opacity:0;transform:translateY(10px);transition:opacity .7s ease,transform .7s ease}
+.article.on .a-text h2,.article.on .a-text .meta{opacity:1;transform:none}
+.reader-hint{text-align:center;font-size:13px;color:#77797F;margin-top:12px}
+.mon-dots{display:flex;justify-content:center;gap:10px;margin:22px 0 0;padding-bottom:70px}
+.mon-dots button{border:none;background:#fff;border-radius:999px;padding:8px 14px;font-size:12.5px;color:#55575F;cursor:pointer;box-shadow:var(--shadow);font-family:'Outfit',sans-serif;transition:.25s}
+.mon-dots button.on,.mon-dots button:hover{background:linear-gradient(135deg,var(--rose-2),var(--rose-deep));color:#fff}
+/* ---- article grid + featured ---- */
+.bl-main{padding:80px 0 90px;background:var(--silver)}
+.bl-layout{display:grid;grid-template-columns:1fr 320px;gap:36px;align-items:start}
+.bl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bl-card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s}
+.bl-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-rose)}
+.bl-card .thumb{height:180px;overflow:hidden}
+.bl-card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.bl-card:hover .thumb img{transform:scale(1.07)}
+.bl-card .bd{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1}
+.bl-card .cat{align-self:flex-start;background:var(--silver-2);border-radius:999px;padding:4px 12px;font-size:11px;letter-spacing:.1em;color:var(--rose-deep);margin-bottom:10px}
+.bl-card h3{font-size:17px;margin-bottom:8px}
+.bl-card p{font-size:13.5px;color:#55575F;flex:1;margin-bottom:12px}
+.bl-card .meta{font-size:12px;color:#77797F}
+.feat{background:#fff;border-radius:24px;padding:22px;box-shadow:var(--shadow)}
+.feat h4{font-size:16px;margin-bottom:14px}
+.feat a{display:flex;gap:12px;align-items:center;padding:10px 0;border-top:1px solid #EEF0F3;cursor:pointer}
+.feat a:first-of-type{border-top:none}
+.feat img{width:64px;height:52px;border-radius:12px;object-fit:cover;flex:none}
+.feat strong{display:block;font-size:13.5px;font-weight:500;line-height:1.3}
+.feat small{font-size:11.5px;color:#77797F}
+/* full-article reader (modal) */
+.reader{position:fixed;inset:0;background:rgba(10,10,12,.7);backdrop-filter:blur(6px);z-index:300;display:none;align-items:center;justify-content:center;padding:24px}
+.reader.open{display:flex}
+.reader-box{width:min(820px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:26px;box-shadow:0 40px 90px rgba(0,0,0,.5)}
+.reader-box .a-cover{height:280px}
+.reader-box .a-text{padding:26px 40px 36px;max-width:none}
+.reader-box .a-text p,.reader-box .a-text h2,.reader-box .a-text .meta{opacity:1;transform:none}
+.reader-close{position:fixed;top:22px;right:26px;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:22px;width:44px;height:44px;border-radius:50%;cursor:pointer}
+.reader-close:hover{background:var(--rose)}
+@media(max-width:1080px){.bl-layout{grid-template-columns:1fr}.bl-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.bl-grid{grid-template-columns:1fr}.screen{height:440px}.a-cover{height:160px}.a-text{padding:16px 18px 0}.mon-neck{height:60px}.mon-base{width:220px}}
 </style>
-
-<style>
-/* ---- "Just in" marketing tag — only on hand-picked products ---- */
-.b-newpill{position:absolute;top:26px;left:26px;z-index:3;display:inline-flex;align-items:center;gap:6px;
-  font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;
-  background:linear-gradient(120deg,var(--rose-2),var(--rose-deep));
-  border-radius:999px;padding:7px 14px 7px 11px;overflow:hidden;
-  box-shadow:0 8px 20px rgba(183,110,121,.42),0 0 0 3px rgba(216,163,171,.18);
-  animation:npFloat 3.8s ease-in-out infinite}
-.b-newpill::after{content:"";position:absolute;top:0;left:-65%;width:45%;height:100%;
-  background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);
-  animation:npShine 3.8s ease-in-out infinite}
-.b-newpill svg{width:11px;height:11px;fill:#fff;flex:none;animation:npSpark 3.8s ease-in-out infinite}
-@keyframes npFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-@keyframes npShine{0%{left:-65%}55%{left:125%}100%{left:125%}}
-@keyframes npSpark{0%,72%,100%{transform:scale(1);opacity:.9}80%{transform:scale(1.35);opacity:1}}
-@media(prefers-reduced-motion:reduce){
-  .b-newpill,.b-newpill::after,.b-newpill svg{animation:none}
-}
-/* the same tag on the product page, sitting on the main photo */
-.pd-stage .b-newpill{top:18px;left:18px}
-</style>
-<link rel="stylesheet" href="assets/css/store.css?v=6">
+<link rel="stylesheet" href="assets/css/store.css?v=7">
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-top">
-    <a class="logo-pill" href="home-v18.html" aria-label="MyChromebook home">
+    <a class="logo-pill" href="index.html" aria-label="MyChromebook home">
       <svg class="logo-mark" viewBox="0 0 44 44">
         <defs>
           <linearGradient id="lgm" x1="0" y1="0" x2="1" y2="1">
@@ -431,136 +452,107 @@ footer li a:hover{color:var(--rose-deep)}
       </svg>
       <span class="logo-word"><span class="my">My</span>Chromebook</span>
     </a>
-    <form class="searchbar" action="shop-v18.html" method="get">
+    <form class="searchbar" action="shop.html" method="get">
       <input type="text" name="q" placeholder="Search Chromebooks, accessories…" aria-label="Search">
       <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
     </form>
     <div class="nav-icons">
-      <a class="icon-c" href="wishlist-v18.html" data-mc="wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><span class="ic-badge"></span></a>
-      <a class="icon-c" href="account-v18.html" data-mc="acct" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></a>
-      <a class="icon-c" href="cart-v18.html" data-mc="cart" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M6 7h12l1.5 12.5a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5L6 7z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg><span class="ic-badge"></span></a>
+      <a class="icon-c" href="wishlist.html" data-mc="wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><span class="ic-badge"></span></a>
+      <a class="icon-c" href="account.html" data-mc="acct" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></a>
+      <a class="icon-c" href="cart.html" data-mc="cart" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M6 7h12l1.5 12.5a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5L6 7z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg><span class="ic-badge"></span></a>
       <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="nav-tabs" id="navTabs">
-    <a class="tab" href="home-v18.html">Home</a>
-    <a class="tab" href="about-v18.html">About</a>
-    <a class="tab" href="shop-v18.html">Shop</a>
-    <a class="tab" href="blog-v18.html">Blog</a>
-    <a class="tab" href="contact-v18.html">Contact</a>
+    <a class="tab" href="index.html">Home</a>
+    <a class="tab" href="about.html">About</a>
+    <a class="tab" href="shop.html">Shop</a>
+    <a class="tab active" href="blog.html">Blog</a>
+    <a class="tab" href="contact.html">Contact</a>
   </div>
 </nav>
 
-<header class="pg-hero">
-  <span class="hero-kicker">Secure checkout</span>
-  <h1>Almost <span class="accent">there</span></h1>
-  <div class="steps">
-    <span class="done"><i>✓</i>Cart</span>
-    <span class="on"><i>2</i>Details</span>
-    <span><i>3</i>Payment</span>
-  </div>
-</header>
+<header class="bl-hero">
+  <span class="hero-kicker">MyChromebook.pk blog</span>
+  <h1>Discover our <span class="accent">latest news</span></h1>
+  <p>Guides, classroom stories, and buying tips — everything about Chromebooks in Pakistan.</p>
+  <form class="searchbar bl-search" action="#" method="get" role="search"><input type="text" name="articles" placeholder="Search articles…" autocomplete="off"><button type="submit" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button></form>
 
-<main class="pg">
-  <form class="pg-grid" id="coForm" novalidate>
-    <div>
-      <div class="panel" id="coWho">
-        <h3>Contact details</h3>
-        <p class="sub" id="coWhoSub">We use these to confirm your order and arrange delivery.
-          Have an account? <a href="account-v18.html?next=checkout-v18.html" style="color:var(--rose-deep);font-weight:600">Sign in</a></p>
-        <div class="f">
-          <label for="coName">Full name</label>
-          <input id="coName" autocomplete="name" placeholder="e.g. Ayesha Khan">
-          <div class="err">Please enter your full name.</div>
-        </div>
-        <div class="f-row">
-          <div class="f">
-            <label for="coPhone">Mobile number</label>
-            <input id="coPhone" type="tel" autocomplete="tel" placeholder="03xx xxxxxxx">
-            <div class="err">Please enter a valid Pakistani mobile number, e.g. 0330 2007440.</div>
-          </div>
-          <div class="f">
-            <label for="coEmail">Email address</label>
-            <input id="coEmail" type="email" autocomplete="email" placeholder="you@example.com">
-            <div class="err">Please enter a valid email address.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <h3>Delivery address</h3>
-        <p class="sub">Free delivery anywhere in Pakistan, usually within 3–5 working days after payment is verified.</p>
-        <div class="f" id="coSavedWrap" style="display:none">
-          <label for="coSaved">Use a saved address</label>
-          <select id="coSaved"></select>
-        </div>
-        <div class="f-row">
-          <div class="f">
-            <label for="coCity">City</label>
-            <select id="coCity" autocomplete="address-level2">
-              <option value="">Select your city</option>
-              <option>Islamabad</option><option>Rawalpindi</option><option>Lahore</option><option>Karachi</option>
-              <option>Faisalabad</option><option>Multan</option><option>Peshawar</option><option>Quetta</option>
-              <option>Sialkot</option><option>Gujranwala</option><option>Hyderabad</option><option>Abbottabad</option>
-              <option>Bahawalpur</option><option>Sargodha</option><option>Other</option>
-            </select>
-            <div class="err">Please choose your city.</div>
-          </div>
-          <div class="f">
-            <label for="coArea">Area / sector <span style="font-weight:400;color:#8A8D95">(optional)</span></label>
-            <input id="coArea" placeholder="e.g. Sector I-8/3">
-          </div>
-        </div>
-        <div class="f">
-          <label for="coAddr">Street address</label>
-          <textarea id="coAddr" autocomplete="street-address" placeholder="House number, street, nearest landmark"></textarea>
-          <div class="err">Please enter your delivery address.</div>
-        </div>
-        <div class="f">
-          <label for="coNotes">Order notes <span style="font-weight:400;color:#8A8D95">(optional)</span></label>
-          <input id="coNotes" placeholder="Anything we should know — e.g. call before delivery">
-        </div>
-        <label class="check" id="coSaveWrap" style="display:none"><input type="checkbox" id="coSave" checked>Save this address to my account</label>
-      </div>
-
-      <div class="panel">
-        <h3>Payment method</h3>
-        <p class="sub">You will see our bank details on the next screen, after you place the order.</p>
-        <div class="pay">
-          <label class="on">
-            <input type="radio" name="pay" value="bank" checked>
-            <span><b>Direct bank transfer</b><small>Transfer the total, then send us the payment screenshot on WhatsApp. We confirm and ship.</small></span>
-            <span class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#AE707B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18"/></svg></span>
-          </label>
-          <label class="off" title="Coming soon">
-            <input type="radio" name="pay" value="card" disabled>
-            <span><b>Card, JazzCash or Easypaisa</b><small>Instant online payment — launching soon.</small></span>
-            <span class="soon">Soon</span>
-          </label>
+  <div class="monitor" id="monitor">
+    <div class="mon-bezel">
+      <div class="screen">
+        <div class="s-prog" id="sprog"></div>
+        <div class="s-top"><i></i><i></i><i></i><span class="s-url" id="surl">mychromebook.pk/blog</span></div>
+        <div class="s-body">
+      <div class="article on" data-id="byod"><div class="a-inner">
+        <div class="a-cover"><img src="assets/blog-byod-girl.png" alt=""><span class="cat">BYOD</span></div>
+        <div class="a-text"><h2>What is BYOD — and why Pakistani schools are adopting it</h2><div class="meta">5 min read · Education</div><p>Bring Your Own Device (BYOD) is a simple idea: every student learns on their own laptop instead of sharing a school computer lab. Lessons, homework, and research move onto one device the student carries from class to home and back again.</p><p>For schools, BYOD removes the bottleneck of a single lab and makes digital learning part of every subject rather than a weekly slot. For families, it means the device is a long-term investment — one that follows the child through the years.</p><p>The catch is that BYOD only works if the devices are reliable, secure, and easy to manage. That is exactly why Chromebooks have become the standard choice: they start in seconds, update themselves, and can be managed centrally by the school.</p><p>Networks such as Beaconhouse now publish approved Chromebook lists for their BYOD programmes. Buying a verified device from the approved list means it will work with the school's systems from day one.</p></div>
+      </div></div>
+      <div class="article" data-id="why"><div class="a-inner">
+        <div class="a-cover"><img src="assets/blog-chromebooks-trio.webp" alt=""><span class="cat">GUIDE</span></div>
+        <div class="a-text"><h2>Why buy a Chromebook? Speed, security, and simplicity</h2><div class="meta">4 min read · Guide</div><p>A Chromebook is built around one principle: it should just work. Open the lid and you are at your desk in seconds. There is no waiting for updates, no antivirus to renew, and no slow-down after a year of use.</p><p>Security is handled by ChromeOS itself. Every app runs in its own sandbox, the system verifies itself on every boot, and updates arrive automatically in the background. Verified Chromebooks sold by MyChromebook.pk receive these updates until June 2031.</p><p>Because everything is saved to Google Drive, a lost or broken device does not mean lost work — sign in on another Chromebook and everything is exactly where you left it.</p><p>Add long battery life, a lightweight body, and an affordable price, and it is easy to see why students, teachers, and businesses across Pakistan are choosing Chromebooks over conventional laptops.</p></div>
+      </div></div>
+      <div class="article" data-id="classroom"><div class="a-inner">
+        <div class="a-cover"><img src="assets/blog-classroom-kids.png" alt=""><span class="cat">CLASSROOM</span></div>
+        <div class="a-text"><h2>Chromebooks in the classroom: how a school rollout actually works</h2><div class="meta">6 min read · Schools</div><p>A successful Chromebook rollout is a programme, not a purchase. It starts with a pilot: a few classes, a few dozen devices, and teachers who volunteer to try the new way of working first.</p><p>Next comes management. With Google Workspace for Education, the school's IT team can set up every device from one dashboard — pre-installing apps, setting safe-browsing rules, and pushing updates without touching a single laptop.</p><p>Teacher training is the step schools most often underestimate. Tech Valley's programmes pair devices with hands-on sessions so teachers are confident with Google Classroom, assignments, and assessment tools before students arrive.</p><p>Finally, support. Warranty, replacements, and a helpline matter more in a school of 800 devices than in a home of one — which is why institutions buy from an official partner rather than the grey market.</p></div>
+      </div></div>
+      <div class="article" data-id="genuine"><div class="a-inner">
+        <div class="a-cover"><img src="assets/blog-beaconhouse-classroom.png" alt=""><span class="cat">BUYING TIPS</span></div>
+        <div class="a-text"><h2>Genuine or grey-market? How to spot a real Chromebook</h2><div class="meta">4 min read · Buying tips</div><p>Pakistan's laptop market is full of devices sold as Chromebooks that are anything but — refurbished units sold as new, models with expired update support, or imports with no warranty at all.</p><p>Start with the update date. Every Chromebook model has an official Auto Update Expiration date. A device that stops receiving updates next year will stop receiving security fixes, new features, and eventually access to some apps.</p><p>Check for an official warranty from the brand or its authorised partner in Pakistan. A seller who cannot show one is selling a device that nobody will stand behind.</p><p>Buy from a Google for Education partner. MyChromebook.pk sells only verified devices from Allied, CTL, and Centerm — with official warranty, free delivery, and a 7-day money-back guarantee.</p></div>
+      </div></div>
         </div>
       </div>
     </div>
+    <div class="mon-neck"></div>
+    <div class="mon-base"></div>
+  </div>
+  <div class="reader-hint">Reading automatically · hover to pause · click a tab to jump</div>
+  <div class="mon-dots" id="mondots"><button data-i="0" class="on">Byod</button><button data-i="1" class="">Guide</button><button data-i="2" class="">Classroom</button><button data-i="3" class="">Buying Tips</button></div>
+</header>
 
-    <aside class="sticky">
-      <div class="panel">
-        <h3>Your order</h3>
-        <p class="sub" id="coCount"></p>
-        <div class="sum-items" id="coItems"></div>
-        <div id="coSum"></div>
-        <button class="btn btn-rose sum-btn" type="submit" id="coPlace">Place order <span class="arrow-c">↗</span></button>
-        <p style="font-size:12px;color:#8A8D95;text-align:center;margin-top:12px;line-height:1.55">
-          By placing your order you agree to our terms and our 7-day return policy.</p>
-        <div class="trust">
-          <div><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Genuine devices, official warranty</div>
-          <div><svg viewBox="0 0 24 24"><rect x="1" y="6" width="15" height="12" rx="2"/><path d="M16 10h4l3 4v4h-7z"/></svg>Free delivery across Pakistan</div>
+<section class="bl-main">
+  <div class="wrap">
+    <div class="bl-layout">
+      <div>
+        <div class="sh-head" style="margin-bottom:24px"><div><h2 style="font-size:clamp(24px,3vw,36px)">All <span class="accent">articles</span></h2><p style="color:#55575F;font-size:14.5px">Click any story to read it in full.</p></div></div>
+        <div class="bl-grid">
+      <article class="bl-card rv" data-open="byod">
+        <div class="thumb"><img src="assets/blog-byod-girl.png" alt=""></div>
+        <div class="bd"><span class="cat">BYOD</span><h3>What is BYOD — and why Pakistani schools are adopting it</h3><p>Bring Your Own Device (BYOD) is a simple idea: every student learns on their own laptop instead of sharing a s…</p><span class="meta">5 min read · Education</span></div>
+      </article>
+      <article class="bl-card rv d1" data-open="why">
+        <div class="thumb"><img src="assets/blog-chromebooks-trio.webp" alt=""></div>
+        <div class="bd"><span class="cat">GUIDE</span><h3>Why buy a Chromebook? Speed, security, and simplicity</h3><p>A Chromebook is built around one principle: it should just work. Open the lid and you are at your desk in seco…</p><span class="meta">4 min read · Guide</span></div>
+      </article>
+      <article class="bl-card rv d2" data-open="classroom">
+        <div class="thumb"><img src="assets/blog-classroom-kids.png" alt=""></div>
+        <div class="bd"><span class="cat">CLASSROOM</span><h3>Chromebooks in the classroom: how a school rollout actually works</h3><p>A successful Chromebook rollout is a programme, not a purchase. It starts with a pilot: a few classes, a few d…</p><span class="meta">6 min read · Schools</span></div>
+      </article>
         </div>
-        <a href="cart-v18.html" style="display:block;text-align:center;font-size:13px;color:#7A7D86;margin-top:16px">← Back to cart</a>
       </div>
-    </aside>
-  </form>
-  <div class="panel" id="coEmpty" style="display:none"></div>
-</main>
+      <aside class="feat rv d1">
+        <h4>Featured</h4>
+        <a data-open="byod"><img src="assets/blog-byod-girl.png" alt=""><span><strong>What is BYOD — and why Pakistani schools are adopting it</strong><small>5 min read · Education</small></span></a><a data-open="why"><img src="assets/blog-chromebooks-trio.webp" alt=""><span><strong>Why buy a Chromebook? Speed, security, and simplicity</strong><small>4 min read · Guide</small></span></a><a data-open="classroom"><img src="assets/blog-classroom-kids.png" alt=""><span><strong>Chromebooks in the classroom: how a school rollout actually works</strong><small>6 min read · Schools</small></span></a><a data-open="genuine"><img src="assets/blog-beaconhouse-classroom.png" alt=""><span><strong>Genuine or grey-market? How to spot a real Chromebook</strong><small>4 min read · Buying tips</small></span></a>
+      </aside>
+    </div>
+  </div>
+</section>
 
+<!-- ===================== CTA ===================== -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-panel rv">
+      <div class="cta-left">
+        <h2>Ready to explore <span class="accent">our products?</span></h2>
+        <p>Genuine devices, official warranty, free delivery. Find the right Chromebook for your classroom, office, or home.</p>
+        <a class="btn btn-rose" href="shop.html">Go to shop <span class="arrow-c">↗</span></a>
+      </div>
+      <div class="cta-right"><img src="assets/lenovo-500e-grey.jpg" alt="Grey Chromebook" style="border-radius:22px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER — glossy metallic ===================== -->
 <footer>
   <div class="f-shine"></div>
   <div class="wrap">
@@ -579,20 +571,20 @@ footer li a:hover{color:var(--rose-deep)}
       <div>
         <h4>Visit</h4>
         <ul>
-          <li><a href="home-v18.html">Home</a></li>
-          <li><a href="about-v18.html">About us</a></li>
-          <li><a href="shop-v18.html">Shop</a></li>
-          <li><a href="blog-v18.html">Blog</a></li>
-          <li><a href="contact-v18.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="account-v18.html">My account</a></li>
-          <li><a href="order-v18.html">Track an order</a></li>
-          <li><a href="#">Terms &amp; conditions</a></li>
-          <li><a href="https://mychromebook.pk/refund-return-policy/">Refund &amp; returns policy</a></li>
+          <li><a href="account.html">My account</a></li>
+          <li><a href="order.html">Track an order</a></li>
+          <li><a href="terms.html">Terms &amp; conditions</a></li>
+          <li><a href="refund.html">Refund &amp; returns policy</a></li>
         </ul>
       </div>
       <div>
@@ -605,7 +597,7 @@ footer li a:hover{color:var(--rose-deep)}
       </div>
     </div>
     <div class="f-bottom">
-      <span>© 2026 MyChromebook.pk. All rights reserved. <a href="admin-v18.html" style="opacity:.55;margin-left:8px">Staff login</a></span>
+      <span>© 2026 MyChromebook.pk. All rights reserved.<a class="staff-link" href="admin.html"><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Staff login</a></span>
       <div class="f-social">
         <a href="https://www.instagram.com/mychromebookpakistan" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8 0-3.2 0-3.6.1-4.8.1-3.2 1.7-4.8 4.9-4.9 1.2-.1 1.6-.1 4.8-.1zm0 3.7a6.1 6.1 0 1 0 0 12.2 6.1 6.1 0 0 0 0-12.2zm0 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.2a1.4 1.4 0 1 1-2.9 0 1.4 1.4 0 0 1 2.9 0z"/></svg></a>
         <a href="https://www.linkedin.com/showcase/my-chromebook/about/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1s2.48 1.1 2.48 2.5zM.2 8h4.6v14.8H.2V8zm7.6 0h4.4v2h.1c.6-1.2 2.1-2.4 4.4-2.4 4.7 0 5.5 3.1 5.5 7.1v8.1h-4.6v-7.2c0-1.7 0-3.9-2.4-3.9s-2.8 1.9-2.8 3.8v7.3H7.8V8z"/></svg></a>
@@ -615,6 +607,9 @@ footer li a:hover{color:var(--rose-deep)}
   </div>
 </footer>
 
+
+
+<div class="reader" id="reader"><button class="reader-close" id="readerClose">✕</button><div class="reader-box" id="readerBox"><div class="reader-art" data-id="byod" style="display:none"><div class="a-cover"><img src="assets/blog-byod-girl.png" alt=""><span class="cat">BYOD</span></div><div class="a-text"><h2>What is BYOD — and why Pakistani schools are adopting it</h2><div class="meta">5 min read · Education</div><p>Bring Your Own Device (BYOD) is a simple idea: every student learns on their own laptop instead of sharing a school computer lab. Lessons, homework, and research move onto one device the student carries from class to home and back again.</p><p>For schools, BYOD removes the bottleneck of a single lab and makes digital learning part of every subject rather than a weekly slot. For families, it means the device is a long-term investment — one that follows the child through the years.</p><p>The catch is that BYOD only works if the devices are reliable, secure, and easy to manage. That is exactly why Chromebooks have become the standard choice: they start in seconds, update themselves, and can be managed centrally by the school.</p><p>Networks such as Beaconhouse now publish approved Chromebook lists for their BYOD programmes. Buying a verified device from the approved list means it will work with the school's systems from day one.</p></div></div><div class="reader-art" data-id="why" style="display:none"><div class="a-cover"><img src="assets/blog-chromebooks-trio.webp" alt=""><span class="cat">GUIDE</span></div><div class="a-text"><h2>Why buy a Chromebook? Speed, security, and simplicity</h2><div class="meta">4 min read · Guide</div><p>A Chromebook is built around one principle: it should just work. Open the lid and you are at your desk in seconds. There is no waiting for updates, no antivirus to renew, and no slow-down after a year of use.</p><p>Security is handled by ChromeOS itself. Every app runs in its own sandbox, the system verifies itself on every boot, and updates arrive automatically in the background. Verified Chromebooks sold by MyChromebook.pk receive these updates until June 2031.</p><p>Because everything is saved to Google Drive, a lost or broken device does not mean lost work — sign in on another Chromebook and everything is exactly where you left it.</p><p>Add long battery life, a lightweight body, and an affordable price, and it is easy to see why students, teachers, and businesses across Pakistan are choosing Chromebooks over conventional laptops.</p></div></div><div class="reader-art" data-id="classroom" style="display:none"><div class="a-cover"><img src="assets/blog-classroom-kids.png" alt=""><span class="cat">CLASSROOM</span></div><div class="a-text"><h2>Chromebooks in the classroom: how a school rollout actually works</h2><div class="meta">6 min read · Schools</div><p>A successful Chromebook rollout is a programme, not a purchase. It starts with a pilot: a few classes, a few dozen devices, and teachers who volunteer to try the new way of working first.</p><p>Next comes management. With Google Workspace for Education, the school's IT team can set up every device from one dashboard — pre-installing apps, setting safe-browsing rules, and pushing updates without touching a single laptop.</p><p>Teacher training is the step schools most often underestimate. Tech Valley's programmes pair devices with hands-on sessions so teachers are confident with Google Classroom, assignments, and assessment tools before students arrive.</p><p>Finally, support. Warranty, replacements, and a helpline matter more in a school of 800 devices than in a home of one — which is why institutions buy from an official partner rather than the grey market.</p></div></div><div class="reader-art" data-id="genuine" style="display:none"><div class="a-cover"><img src="assets/blog-beaconhouse-classroom.png" alt=""><span class="cat">BUYING TIPS</span></div><div class="a-text"><h2>Genuine or grey-market? How to spot a real Chromebook</h2><div class="meta">4 min read · Buying tips</div><p>Pakistan's laptop market is full of devices sold as Chromebooks that are anything but — refurbished units sold as new, models with expired update support, or imports with no warranty at all.</p><p>Start with the update date. Every Chromebook model has an official Auto Update Expiration date. A device that stops receiving updates next year will stop receiving security fixes, new features, and eventually access to some apps.</p><p>Check for an official warranty from the brand or its authorised partner in Pakistan. A seller who cannot show one is selling a device that nobody will stand behind.</p><p>Buy from a Google for Education partner. MyChromebook.pk sells only verified devices from Allied, CTL, and Centerm — with official warranty, free delivery, and a 7-day money-back guarantee.</p></div></div></div></div>
 <!-- lightbox -->
 <div class="lightbox" id="lightbox">
   <button class="lb-close" id="lbClose" aria-label="Close video">✕</button>
@@ -622,9 +617,9 @@ footer li a:hover{color:var(--rose-deep)}
 </div>
 
 <!-- store: settings, products, cart/wishlist/search engine -->
-<script src="assets/js/site-config.js?v=6"></script>
-<script src="assets/js/products.js?v=6"></script>
-<script src="assets/js/store.js?v=6"></script>
+<script src="assets/js/site-config.js?v=7"></script>
+<script src="assets/js/products.js?v=7"></script>
+<script src="assets/js/store.js?v=7"></script>
 <script>
 // ===== rotating hero decks =====
 (function(){
@@ -669,26 +664,34 @@ footer li a:hover{color:var(--rose-deep)}
     setInterval(()=>{imgs[i].classList.remove('on');dots[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on');dots[i].classList.add('on');},3200);
   });
 })();
-// ===== shop filters =====
+// ===== blog: monitor auto-reader =====
 (function(){
-  const f=document.getElementById('filters'), sf=document.getElementById('subfilters'); if(!f) return;
-  const secs=[...document.querySelectorAll('.sh-sec')], items=[...document.querySelectorAll('.b-item[data-cat]')], heads=[...document.querySelectorAll('.sh-sub')];
-  const pop=els=>els.forEach(el=>{el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');});
-  f.addEventListener('click',e=>{const t=e.target.closest('[data-f]'); if(!t) return; e.preventDefault();
-    f.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active');
-    const v=t.dataset.f; sf.style.display=v==='accessories'?'flex':'none';
-    secs.forEach(s=>s.classList.toggle('hide',!(v==='all'||s.dataset.sec===v)));
-    items.forEach(i=>i.classList.remove('hide')); heads.forEach(h=>h.style.display='');
-    sf.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); sf.querySelector('[data-s="all"]').classList.add('active');
-    pop(items.filter(i=>!i.closest('.sh-sec').classList.contains('hide'))); document.getElementById('filters').scrollIntoView({behavior:'smooth',block:'start'});
-  });
-  sf.addEventListener('click',e=>{const t=e.target.closest('[data-s]'); if(!t) return; e.preventDefault();
-    sf.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active');
-    const v=t.dataset.s;
-    items.forEach(i=>{ if(i.dataset.cat!=='accessories') return; i.classList.toggle('hide',!(v==='all'||i.dataset.sub===v)); });
-    heads.forEach(h=>h.style.display=(v==='all'||h.dataset.subhead===v)?'':'none');
-    pop(items.filter(i=>!i.classList.contains('hide')&&i.dataset.cat==='accessories'));
-  });
+  const arts=[...document.querySelectorAll('.s-body .article')], dots=[...document.querySelectorAll('#mondots button')], prog=document.getElementById('sprog'), url=document.getElementById('surl'), mon=document.getElementById('monitor');
+  if(!arts.length) return;
+  let cur=0, timer=null, paused=false, t0=0, dur=12000, elapsed=0;
+  function show(i){
+    arts.forEach((a,k)=>{a.classList.toggle('on',k===i); a.querySelectorAll('p').forEach(p=>p.classList.remove('show')); a.querySelector('.a-inner').style.transform='';});
+    dots.forEach((d,k)=>d.classList.toggle('on',k===i));
+    url.textContent='mychromebook.pk/blog/'+arts[i].dataset.id;
+    const ps=[...arts[i].querySelectorAll('p')];
+    ps.forEach((p,k)=>setTimeout(()=>{p.classList.add('show'); if(k>=1) arts[i].querySelector('.a-inner').style.transform='translateY(-'+Math.min(230,60+k*70)+'px)';},900+k*2200));
+    elapsed=0; t0=performance.now(); prog.style.width='0';
+  }
+  function tick(){
+    if(!paused){ elapsed=performance.now()-t0; prog.style.width=Math.min(100,elapsed/dur*100)+'%'; if(elapsed>=dur){cur=(cur+1)%arts.length; show(cur);} }
+    else { t0=performance.now()-elapsed; }
+    requestAnimationFrame(tick);
+  }
+  show(0); requestAnimationFrame(tick);
+  mon.addEventListener('mouseenter',()=>paused=true); mon.addEventListener('mouseleave',()=>paused=false);
+  dots.forEach(d=>d.addEventListener('click',()=>{cur=+d.dataset.i; show(cur);}));
+  // full-article reader
+  const rd=document.getElementById('reader'), box=document.getElementById('readerBox');
+  document.querySelectorAll('[data-open]').forEach(el=>el.addEventListener('click',()=>{
+    box.querySelectorAll('.reader-art').forEach(a=>a.style.display=a.dataset.id===el.dataset.open?'block':'none'); rd.classList.add('open'); box.scrollTop=0;
+  }));
+  document.getElementById('readerClose').addEventListener('click',()=>rd.classList.remove('open'));
+  rd.addEventListener('click',e=>{if(e.target===rd) rd.classList.remove('open');});
 })();
 // reveal on scroll
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
@@ -708,95 +711,37 @@ document.querySelectorAll('.v-card').forEach(c=>{
 document.getElementById('lbClose').addEventListener('click',()=>{lb.classList.remove('open');lbFrame.innerHTML=''});
 lb.addEventListener('click',e=>{if(e.target===lb){lb.classList.remove('open');lbFrame.innerHTML=''}});
 </script>
+
 <script>
-
+/* blog: search articles on this page + open an article straight from a link (blog.html#read-byod) */
 (function () {
-  if (!window.MC) return;
-  var $ = function (id) { return document.getElementById(id); };
-  var form = $('coForm'), empty = $('coEmpty');
-
-  /* ---- summary ---- */
-  var paint = function () {
-    var items = MC.cart.items();
-    if (!items.length) {
-      form.style.display = 'none'; empty.style.display = '';
-      empty.innerHTML = MC.emptyHTML('Your cart is empty', 'Add a product to your cart before checking out.', 'shop-v18.html', 'Go to shop');
-      return;
-    }
-    var n = MC.cart.count();
-    $('coCount').textContent = n + (n === 1 ? ' item' : ' items');
-    $('coItems').innerHTML = items.map(function (l) {
-      return '<div class="li"><span class="li-img"><img src="' + MC.esc(l.p.image) + '" alt=""></span>' +
-        '<div><span class="li-name" style="font-size:13px">' + MC.esc(l.p.name) + '</span><span class="li-meta">Qty ' + l.qty + '</span></div>' +
-        '<span class="li-price" style="font-size:13px">' + MC.money(l.line) + '</span></div>';
-    }).join('');
-    $('coSum').innerHTML =
-      '<div class="sum-row"><span>Subtotal</span><b>' + MC.money(MC.cart.subtotal()) + '</b></div>' +
-      '<div class="sum-row"><span>Delivery</span>' + (MC.cart.delivery() ? '<b>' + MC.money(MC.cart.delivery()) + '</b>' : '<span class="sum-free">Free</span>') + '</div>' +
-      '<div class="sum-row tot"><span>Total</span><span>' + MC.money(MC.cart.total()) + '</span></div>';
+  var form = document.querySelector('.bl-search'); if (!form) return;
+  var input = form.querySelector('input');
+  var cards = [].slice.call(document.querySelectorAll('.bl-card'));
+  var grid = document.querySelector('.bl-grid');
+  var none = document.createElement('p');
+  none.style.cssText = 'display:none;grid-column:1/-1;text-align:center;color:#6B6E78;font-size:14.5px;padding:30px 0';
+  if (grid) grid.appendChild(none);
+  var run = function () {
+    var t = input.value.trim().toLowerCase(), shown = 0;
+    cards.forEach(function (c) {
+      var hit = !t || c.textContent.toLowerCase().indexOf(t) > -1;
+      c.style.display = hit ? '' : 'none'; if (hit) shown++;
+    });
+    none.style.display = shown ? 'none' : '';
+    none.textContent = 'No articles match “' + input.value.trim() + '”.';
   };
-  window.addEventListener('mc:change', paint);
-  paint();
-
-  /* ---- prefill for signed-in customers (demo accounts) ---- */
-  var me = MC.account.current();
-  if (me) {
-    $('coName').value = me.name || ''; $('coEmail').value = me.email || ''; $('coPhone').value = me.phone || '';
-    $('coWhoSub').innerHTML = 'Signed in as <b>' + MC.esc(me.name) + '</b>. Check your details below.';
-    $('coSaveWrap').style.display = '';
-    var ads = me.addresses || [];
-    if (ads.length) {
-      $('coSavedWrap').style.display = '';
-      $('coSaved').innerHTML = '<option value="">Enter a new address</option>' + ads.map(function (a, i) {
-        return '<option value="' + i + '"' + (i === 0 ? ' selected' : '') + '>' + MC.esc(a.label || a.city) + ' — ' + MC.esc(a.address.slice(0, 40)) + '</option>';
-      }).join('');
-      var use = function () {
-        var a = ads[$('coSaved').value];
-        $('coCity').value = a ? a.city : ''; $('coArea').value = a ? (a.area || '') : ''; $('coAddr').value = a ? a.address : '';
-        $('coSaveWrap').style.display = a ? 'none' : '';
-      };
-      $('coSaved').addEventListener('change', use); use();
-    }
-  }
-
-  /* ---- validation ---- */
-  var rules = {
-    coName:  function (v) { return v.trim().length >= 3; },
-    coPhone: function (v) { var d = v.replace(/[\s-]/g, ''); return /^(\+92|0092|92|0)3\d{9}$/.test(d); },
-    coEmail: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); },
-    coCity:  function (v) { return !!v; },
-    coAddr:  function (v) { return v.trim().length >= 8; }
-  };
-  var check = function (id) {
-    var el = $(id), ok = rules[id](el.value);
-    el.closest('.f').classList.toggle('bad', !ok);
-    return ok;
-  };
-  Object.keys(rules).forEach(function (id) {
-    $(id).addEventListener('blur', function () { if ($(id).value) check(id); });
-    $(id).addEventListener('input', function () { if ($(id).closest('.f').classList.contains('bad')) check(id); });
-  });
-
+  input.addEventListener('input', run);
   form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var bad = Object.keys(rules).filter(function (id) { return !check(id); });
-    if (bad.length) { $(bad[0]).focus(); $(bad[0]).scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
-
-    var customer = {
-      name: $('coName').value.trim(), phone: $('coPhone').value.trim(), email: $('coEmail').value.trim().toLowerCase(),
-      city: $('coCity').value, area: $('coArea').value.trim(), address: $('coAddr').value.trim(), notes: $('coNotes').value.trim()
-    };
-    if (me && $('coSaveWrap').style.display !== 'none' && $('coSave').checked) {
-      var list = (me.addresses || []).slice();
-      list.unshift({ label: customer.city, city: customer.city, area: customer.area, address: customer.address });
-      MC.account.update({ addresses: list.slice(0, 5) });
-    }
-    var btn = $('coPlace'); btn.disabled = true; btn.innerHTML = 'Placing your order…';
-    var o = MC.orders.create(customer);
-    if (o) location.href = 'order-v18.html?id=' + encodeURIComponent(o.id) + '&new=1';
+    e.preventDefault(); run();
+    if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+  var key = (location.hash || '').replace('#read-', '');
+  if (key) {
+    var el = document.querySelector('[data-open="' + key + '"]');
+    if (el) setTimeout(function () { el.click(); }, 450);
+  }
 })();
-
 </script>
 </body>
 </html>

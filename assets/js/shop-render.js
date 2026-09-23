@@ -36,7 +36,7 @@
     var delay = ['', 'd1', 'd2', 'd3'][i % 4];
     var specs = (p.specs || []).map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('');
     var sold = p.stock === 'out';
-    var link = 'product-v18.html?id=' + encodeURIComponent(p.id);
+    var link = 'product.html?id=' + encodeURIComponent(p.id);
     var btn = sold
       ? '<span class="btn btn-metal btn-sm">Sold out</span>'
       : '<a class="btn btn-rose btn-sm" href="' + link + '">View details</a>';
@@ -91,7 +91,7 @@
     if (accCount) accCount.textContent = total + (total === 1 ? ' item' : ' items');
   }
 
-  /* ---- search results: shop-v18.html?q=mouse ---- */
+  /* ---- search results: shop.html?q=mouse ---- */
   var term = new URLSearchParams(location.search).get('q');
   if (term && term.trim() && window.MC) {
     term = term.trim();
@@ -103,11 +103,11 @@
       '<div class="wrap">' +
         '<div class="sh-head"><div><h2>Results for <span class="accent">\u201C' + esc(term) + '\u201D</span></h2>' +
           '<p>' + (found.length ? 'Showing every product that matches your search.' : 'Nothing matched. Try a shorter word, or browse the full range.') + '</p></div>' +
-          '<a class="count" href="shop-v18.html" style="cursor:pointer">\u2715 Clear search</a></div>' +
+          '<a class="count" href="shop.html" style="cursor:pointer">\u2715 Clear search</a></div>' +
         (found.length ? '<div class="grid4">' + found.map(card).join('') + '</div>' :
           '<div class="empty"><div class="e-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>' +
           '<h3>No products found</h3><p>We could not find anything for that search. Try \u201Cmouse\u201D, \u201Cstylus\u201D, \u201Crefurbished\u201D or \u201CCTL\u201D.</p>' +
-          '<a class="btn btn-rose" href="shop-v18.html">Browse all products <span class="arrow-c">\u2197</span></a></div>') +
+          '<a class="btn btn-rose" href="shop.html">Browse all products <span class="arrow-c">\u2197</span></a></div>') +
       '</div>';
     if (first) first.parentNode.insertBefore(sec, first);
     document.querySelectorAll('.sh-sec:not(.sh-results)').forEach(function (x) { x.style.display = 'none'; });

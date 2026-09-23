@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="Refund and returns policy — 7-day money-back guarantee at MyChromebook.pk.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23D8A3AB'/%3E%3Cstop offset='.55' stop-color='%23C4838D'/%3E%3Cstop offset='1' stop-color='%23B4B9C3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='6' y='9' width='32' height='21' rx='4' fill='none' stroke='url%28%23g%29' stroke-width='3'/%3E%3Cpath d='M4 33.5h36' stroke='url%28%23g%29' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='22' cy='19.5' r='3.4' fill='url%28%23g%29'/%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — MyChromebook.pk</title>
+<title>Refund & returns policy — MyChromebook.pk</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -360,111 +362,89 @@ footer li a:hover{color:var(--rose-deep)}
   .rail-card{width:270px;height:360px}
 }
 
-/* ============ ABOUT page ============ */
-.ab-hero{padding:70px 24px 90px;overflow:hidden;background:
+/* ============ SHOP page ============ */
+.sh-hero{padding:56px 24px 34px;text-align:center;background:
   radial-gradient(720px 430px at 12% 20%, var(--rose-glow), transparent 64%),
   radial-gradient(780px 500px at 90% 90%, rgba(190,196,206,.55), transparent 64%),
   linear-gradient(180deg,#F7F8FA 0%,#EDEFF2 60%,#E5E8EC 100%)}
-.ab-grid{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
-.ab-copy > *{opacity:0;animation:riseIn .8s ease forwards}
-.ab-copy .hero-kicker{animation-delay:.1s}
-.ab-copy h1{font-size:clamp(34px,4.4vw,56px);margin:14px 0 22px;animation-delay:.25s}
-.ab-copy p{color:#4B4D55;font-size:16px;margin-bottom:16px;max-width:560px}
-.ab-copy p:nth-of-type(1){animation-delay:.4s}.ab-copy p:nth-of-type(2){animation-delay:.5s}.ab-copy p:nth-of-type(3){animation-delay:.6s}
-.ab-copy .hero-cta{justify-content:flex-start;margin-top:10px;animation-delay:.75s}
-.ab-visual{position:relative;opacity:0;animation:swipeR 1s cubic-bezier(.18,.8,.22,1) .45s forwards}
-.ab-photo{border-radius:28px;overflow:hidden;box-shadow:0 0 30px rgba(186,191,201,.55),0 34px 64px rgba(38,39,46,.22);transform:rotate(2deg)}
-.ab-photo img{width:100%;height:440px;object-fit:cover}
-.ab-chip{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:500;animation:floaty 8s ease-in-out infinite}
-.ab-chip svg{width:18px;height:18px;stroke:var(--rose);fill:none;stroke-width:2}
-.ab-chip.c1{left:-26px;top:38px}
-.ab-chip.c2{right:-18px;bottom:46px;animation-delay:1.3s}
-/* values */
-.values{padding:92px 0;background:linear-gradient(180deg,var(--platinum),#E6E8EC)}
-.val-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-/* tech valley */
-.tv{padding:96px 0;background:radial-gradient(660px 400px at 8% 10%, rgba(216,163,171,.22), transparent 60%),var(--silver)}
-.tv-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px;align-items:center}
-.tv-logos{grid-column:1;order:1}
-.tv-copy{grid-column:2;order:2}
-.tv-card{background:#fff;border-radius:26px;padding:36px;box-shadow:var(--shadow)}
-.tv-card h3{font-size:22px;margin-bottom:12px}
-.tv-card p{color:#4B4D55;font-size:15px;margin-bottom:14px}
-.tv-logos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.tv-logos div{background:#fff;border-radius:18px;height:90px;display:flex;align-items:center;justify-content:center;padding:16px;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s}
-.tv-logos div:hover{transform:translateY(-5px);box-shadow:var(--shadow-rose)}
-.tv-logos img{max-height:46px;max-width:100%;object-fit:contain}
-@media(max-width:1080px){.ab-grid{grid-template-columns:1fr}.val-grid{grid-template-columns:1fr 1fr}.ab-chip.c1{left:8px}.ab-chip.c2{right:8px}}
-@media(max-width:860px){.tv-grid{grid-template-columns:1fr}.tv-copy,.tv-logos{grid-column:auto}}
-@media(max-width:760px){.val-grid{grid-template-columns:1fr}.ab-photo img{height:300px}.tv-logos{grid-template-columns:1fr 1fr}.ab-hero{padding:48px 20px 64px}}
-
-@keyframes swipeR{from{opacity:0;transform:translateX(120px)}to{opacity:1;transform:translateX(0)}}
-@keyframes swipeL{from{opacity:0;transform:translateX(-120px)}to{opacity:1;transform:translateX(0)}}
-/* layered photo composition for Who we are */
-.ab-visual{perspective:1200px}
-.ab-stage{position:relative;height:500px}
-.ab-layer{position:absolute;transition:transform .35s ease;will-change:transform}
-.ab-main{left:8%;top:0;width:88%;height:400px;border-radius:30px;overflow:hidden;box-shadow:0 0 30px rgba(186,191,201,.55),0 34px 64px rgba(38,39,46,.22);transform:rotate(2deg)}
-.ab-main img{width:100%;height:100%;object-fit:cover;animation:kenburns 14s ease-in-out infinite alternate}
-@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.1)}}
-.ab-sub{left:-10px;bottom:0;width:44%;height:210px;border-radius:22px;overflow:hidden;box-shadow:0 0 0 5px #fff,0 0 26px rgba(186,191,201,.6),0 24px 44px rgba(38,39,46,.2);transform:rotate(-5deg)}
-.ab-sub img{width:100%;height:100%;object-fit:cover}
-.ab-glow{left:20%;top:12%;width:70%;height:70%;border-radius:50%;background:radial-gradient(circle, rgba(216,163,171,.45), transparent 70%);filter:blur(12px);z-index:-1}
-.ab-chip{position:absolute;z-index:3}
-.ab-chip.c1{right:-14px;top:26px;left:auto}
-.ab-chip.c2{right:6%;bottom:-8px}
-.ab-chip.c3{left:40%;top:56%;animation-delay:2.4s}
-/* Tech Valley: plain text left, logo cards right */
-.tv-copy h2{font-size:clamp(28px,3.4vw,42px);margin-bottom:16px}
-.tv-copy p{color:#4B4D55;font-size:15.5px;margin-bottom:14px;max-width:520px}
-.tv-logos{grid-template-columns:repeat(2,1fr)}
-.tv-logos div{height:104px}
-/* Who we serve */
-.serve{padding:96px 0;background:linear-gradient(180deg,#E9EBEF,#F3F4F6)}
-.serve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.serve-card{position:relative;height:380px;border-radius:26px;overflow:hidden;box-shadow:var(--shadow);display:flex;align-items:flex-end;transition:transform .35s,box-shadow .35s}
-.serve-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-rose)}
-.serve-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
-.serve-card:hover img{transform:scale(1.07)}
-.serve-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(16,16,20,.84))}
-.serve-body{position:relative;z-index:2;padding:26px;color:#fff}
-.serve-body h3{font-size:22px;margin-bottom:8px}
-.serve-body p{font-size:13.5px;color:#D6D8DE;margin-bottom:12px}
-.serve-body .cat{display:inline-block;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:5px 13px;font-size:11px;letter-spacing:.08em;margin-bottom:12px}
-@media (prefers-reduced-motion: reduce){.ab-visual,.ab-copy > *{opacity:1 !important;animation:none !important}}
-@media(max-width:1080px){.serve-grid{grid-template-columns:1fr}.ab-stage{height:440px}}
-@media(max-width:760px){.ab-stage{height:360px}.ab-main{height:280px}.ab-sub{height:150px}.ab-chip.c3{display:none}}
-
-/* Who we serve — vertical list */
-.serve-list{display:flex;flex-direction:column;gap:26px}
-.serve-row{display:grid;grid-template-columns:1.05fr 1fr;gap:0;align-items:stretch;background:#fff;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);transition:transform .35s,box-shadow .35s;min-height:320px}
-.serve-row:hover{transform:translateY(-6px);box-shadow:var(--shadow-rose)}
-.serve-row.flip .serve-media{order:2}
-.serve-media{position:relative;overflow:hidden;min-height:280px}
-.serve-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
-.serve-row:hover .serve-media img{transform:scale(1.06)}
-.serve-media .num{position:absolute;left:20px;top:18px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--rose-deep);box-shadow:0 0 14px rgba(186,191,201,.5)}
-.serve-text{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
-.serve-text .cat{display:inline-block;align-self:flex-start;background:var(--silver-2);border-radius:999px;padding:5px 13px;font-size:11px;letter-spacing:.1em;color:var(--rose-deep);margin-bottom:14px}
-.serve-text h3{font-size:clamp(22px,2.4vw,28px);margin-bottom:10px}
-.serve-text p{color:#4B4D55;font-size:15px;margin-bottom:18px;max-width:480px}
-.serve-text ul{list-style:none;margin-bottom:22px;display:flex;flex-direction:column;gap:8px}
-.serve-text li{display:flex;gap:10px;align-items:center;font-size:14px;color:#33353C}
-.serve-text li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rose);flex:none}
-@media(max-width:860px){.serve-row,.serve-row.flip{grid-template-columns:1fr}.serve-row.flip .serve-media{order:0}.serve-text{padding:28px}}
+.sh-hero h1{font-size:clamp(34px,4.4vw,54px);margin:12px 0 10px;opacity:0;animation:riseIn .8s ease .2s forwards}
+.sh-hero p{color:#4B4D55;max-width:560px;margin:0 auto 26px;opacity:0;animation:riseIn .8s ease .35s forwards}
+.sh-hero .hero-kicker{opacity:0;animation:riseIn .8s ease .1s forwards}
+.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;opacity:0;animation:riseIn .8s ease .5s forwards}
+.filters .tab{padding:8px 18px}
+.subfilters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.subfilters .tab{padding:6px 14px;font-size:12.5px}
+.sh-sec{padding:70px 0}
+.sh-sec:nth-of-type(even){background:linear-gradient(180deg,var(--platinum),#E6E8EC)}
+.sh-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:30px;flex-wrap:wrap}
+.sh-head h2{font-size:clamp(26px,3.2vw,40px)}
+.sh-head p{color:#55575F;font-size:14.5px}
+.count{background:#fff;border-radius:999px;padding:6px 14px;font-size:12.5px;color:#55575F;box-shadow:var(--shadow)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.grid4 .b-item .b-img{height:250px}
+.sh-sub{font-size:12px;letter-spacing:.14em;color:var(--rose-deep);font-weight:500;margin:34px 0 14px}
+.b-item.hide{display:none}
+.b-item.pop{animation:popIn .5s ease both}
+@keyframes popIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+.sh-sec.hide{display:none}
+.b-item .b-body h3{font-size:16.5px}
+.b-item .desc{font-size:13px}
+@media(max-width:1080px){.grid4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.grid4{grid-template-columns:1fr}}
 </style>
+
 <style>
-.cta-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-@media(max-width:560px){.cta-btns{flex-direction:column;align-items:stretch}
-  .cta-btns .btn{justify-content:center}}
+/* ---- "Just in" marketing tag — only on hand-picked products ---- */
+.b-newpill{position:absolute;top:26px;left:26px;z-index:3;display:inline-flex;align-items:center;gap:6px;
+  font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;
+  background:linear-gradient(120deg,var(--rose-2),var(--rose-deep));
+  border-radius:999px;padding:7px 14px 7px 11px;overflow:hidden;
+  box-shadow:0 8px 20px rgba(183,110,121,.42),0 0 0 3px rgba(216,163,171,.18);
+  animation:npFloat 3.8s ease-in-out infinite}
+.b-newpill::after{content:"";position:absolute;top:0;left:-65%;width:45%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);
+  animation:npShine 3.8s ease-in-out infinite}
+.b-newpill svg{width:11px;height:11px;fill:#fff;flex:none;animation:npSpark 3.8s ease-in-out infinite}
+@keyframes npFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes npShine{0%{left:-65%}55%{left:125%}100%{left:125%}}
+@keyframes npSpark{0%,72%,100%{transform:scale(1);opacity:.9}80%{transform:scale(1.35);opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .b-newpill,.b-newpill::after,.b-newpill svg{animation:none}
+}
+/* the same tag on the product page, sitting on the main photo */
+.pd-stage .b-newpill{top:18px;left:18px}
 </style>
-<link rel="stylesheet" href="assets/css/store.css?v=6">
+<link rel="stylesheet" href="assets/css/store.css?v=7">
+<style>
+
+.lg{display:grid;grid-template-columns:250px 1fr;gap:30px;align-items:start;max-width:1080px;margin:0 auto}
+.lg-toc{position:sticky;top:104px;background:#fff;border-radius:22px;box-shadow:var(--shadow);padding:20px}
+.lg-toc b{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#8A8D95;margin-bottom:10px}
+.lg-toc a{display:block;font-size:13.5px;color:#5A5D68;padding:7px 10px;border-radius:10px;transition:background .2s,color .2s}
+.lg-toc a:hover{background:var(--silver);color:var(--graphite)}
+.lg-body{background:#fff;border-radius:26px;box-shadow:var(--shadow);padding:40px 44px}
+.lg-body .upd{font-size:12.5px;color:#8A8D95;margin-bottom:26px}
+.lg-body section{scroll-margin-top:110px}
+.lg-body section + section{margin-top:30px;padding-top:28px;border-top:1px solid var(--silver-2)}
+.lg-body h2{font-size:20px;margin-bottom:12px}
+.lg-body p,.lg-body li{font-size:14.5px;color:#4B4D55;line-height:1.8}
+.lg-body p + p{margin-top:10px}
+.lg-body ul{padding-left:20px;margin-top:8px}
+.lg-body li{margin-bottom:6px}
+.lg-body a{color:var(--rose-deep);font-weight:500}
+.lg-help{margin-top:34px;background:linear-gradient(120deg,var(--rose-soft),#fff);border-radius:20px;padding:22px 24px;
+  display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.lg-help p{margin:0;flex:1;min-width:220px}
+.lg-help .btn{padding:11px 20px;font-size:13.5px}
+@media(max-width:900px){.lg{grid-template-columns:1fr}.lg-toc{position:static}.lg-body{padding:28px 24px}}
+
+</style>
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-top">
-    <a class="logo-pill" href="home-v18.html" aria-label="MyChromebook home">
+    <a class="logo-pill" href="index.html" aria-label="MyChromebook home">
       <svg class="logo-mark" viewBox="0 0 44 44">
         <defs>
           <linearGradient id="lgm" x1="0" y1="0" x2="1" y2="1">
@@ -477,153 +457,44 @@ footer li a:hover{color:var(--rose-deep)}
       </svg>
       <span class="logo-word"><span class="my">My</span>Chromebook</span>
     </a>
-    <form class="searchbar" action="shop-v18.html" method="get">
+    <form class="searchbar" action="shop.html" method="get">
       <input type="text" name="q" placeholder="Search Chromebooks, accessories…" aria-label="Search">
       <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
     </form>
     <div class="nav-icons">
-      <a class="icon-c" href="wishlist-v18.html" data-mc="wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><span class="ic-badge"></span></a>
-      <a class="icon-c" href="account-v18.html" data-mc="acct" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></a>
-      <a class="icon-c" href="cart-v18.html" data-mc="cart" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M6 7h12l1.5 12.5a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5L6 7z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg><span class="ic-badge"></span></a>
+      <a class="icon-c" href="wishlist.html" data-mc="wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><span class="ic-badge"></span></a>
+      <a class="icon-c" href="account.html" data-mc="acct" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></a>
+      <a class="icon-c" href="cart.html" data-mc="cart" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M6 7h12l1.5 12.5a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5L6 7z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg><span class="ic-badge"></span></a>
       <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="nav-tabs" id="navTabs">
-    <a class="tab" href="home-v18.html">Home</a>
-    <a class="tab active" href="about-v18.html">About</a>
-    <a class="tab" href="shop-v18.html">Shop</a>
-    <a class="tab" href="blog-v18.html">Blog</a>
-    <a class="tab" href="contact-v18.html">Contact</a>
+    <a class="tab" href="index.html">Home</a>
+    <a class="tab" href="about.html">About</a>
+    <a class="tab" href="shop.html">Shop</a>
+    <a class="tab" href="blog.html">Blog</a>
+    <a class="tab" href="contact.html">Contact</a>
   </div>
 </nav>
 
-<!-- ===================== ABOUT HERO — Who we are ===================== -->
-<header class="ab-hero">
-  <div class="ab-grid">
-    <div class="ab-copy">
-      <span class="hero-kicker">Welcome to MyChromebook.pk</span>
-      <h1>Who <span class="accent">we are</span></h1>
-      <p>As a venture of Tech Valley — an official Google for Education and ChromeOS Partner in Pakistan — MyChromebook.pk is dedicated to empowering education through technology.</p>
-      <p>We launched this platform to address the need for genuine, high-quality Google Chromebooks in a market often flooded with unreliable, grey-market devices. Our commitment is to provide only authentic products that ensure performance, reliability, and peace of mind.</p>
-      <p>Whether you're a student, teacher, or organization, our mission is to support your digital journey with the right tools for learning and productivity.</p>
-      <div class="hero-cta">
-        <a class="btn btn-rose" href="contact-v18.html">Contact us <span class="arrow-c">↗</span></a>
-        <a class="btn btn-metal" href="home-v18.html#products">See our Chromebooks</a>
-      </div>
-    </div>
-    <div class="ab-visual" id="abVisual">
-      <div class="ab-stage">
-        <div class="ab-layer ab-glow" data-depth="6"></div>
-        <div class="ab-layer ab-main" data-depth="10"><img src="assets/about-team.jpg" alt="Our team at work"></div>
-        <div class="ab-layer ab-sub" data-depth="22"><img src="assets/blog-classroom-kids.png" alt="Students learning on Chromebooks"></div>
-        <div class="ab-chip c1 ab-layer" data-depth="30"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Google for Education Partner</div>
-        <div class="ab-chip c2 ab-layer" data-depth="26"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Authentic devices, official warranty</div>
-        <div class="ab-chip c3 ab-layer" data-depth="34"><svg viewBox="0 0 24 24"><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Education first</div>
-      </div>
-    </div>
-  </div>
+<header class="pg-hero">
+  <span class="hero-kicker">Store policies</span>
+  <h1>Refund &amp; <span class="accent">returns</span></h1>
+  <p>Not quite right? Here is how our 7-day money-back guarantee works.</p>
 </header>
-
-<!-- ===================== VALUES (added section 1) ===================== -->
-<section class="values">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="rv">What we <span class="accent">stand for</span></h2>
-      <p class="rv d1">The promises behind every Chromebook that leaves our hands.</p>
-    </div>
-    <div class="val-grid">
-      <div class="p-card rv "><div class="p-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Genuine devices only</h3><p>Every Chromebook we sell is authentic and Google-verified — never grey-market, never refurbished-as-new.</p></div>
-      <div class="p-card rv d1"><div class="p-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div><h3>Education first</h3><p>Built for students, teachers, and institutions — from BYOD programmes to whole-school deployments.</p></div>
-      <div class="p-card rv d2"><div class="p-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg></div><h3>Official partner ecosystem</h3><p>A venture of Tech Valley — Google for Education and ChromeOS partner in Pakistan, working with Allied, CTL, and NRTC.</p></div>
-      <div class="p-card rv d3"><div class="p-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Care after the sale</h3><p>Official warranty, 7-day money-back guarantee, and support that's there when you need it.</p></div>
-    </div>
+<main class="pg">
+  <div class="lg">
+    <nav class="lg-toc" aria-label="On this page"><b>On this page</b><a href="#promise">Our 7-day promise</a><a href="#eligible">What can be returned</a><a href="#faulty">Faulty or damaged items</a><a href="#how">How to return an item</a><a href="#refunds">Refunds</a><a href="#exchange">Exchanges</a>
+      <a href="terms.html" style="margin-top:8px;border-top:1px solid var(--silver-2);border-radius:0;padding-top:12px">Terms &amp; conditions →</a></nav>
+    <article class="lg-body">
+      <p class="upd">Last updated: September 2026</p>
+      <section id="promise"><h2>Our 7-day promise</h2><p>If you are not happy with your purchase, you can return it within <b>7 days of delivery</b> for a full refund or an exchange.</p></section><section id="eligible"><h2>What can be returned</h2><ul><li>The product is returned within 7 days of delivery.</li><li>It is in the same condition you received it, with all accessories, manuals and the original packaging.</li><li>For Chromebooks, the device has been signed out of all Google accounts and reset.</li></ul><p>For hygiene reasons, earphones and earbuds can only be returned if they are unopened, unless they are faulty.</p></section><section id="faulty"><h2>Faulty or damaged items</h2><p>If your item arrives faulty or damaged, contact us on WhatsApp within 24 hours of delivery with a photo or short video. We will arrange a replacement or a full refund at no cost to you.</p><p>Faults that appear after the 7-day period are handled under the product warranty.</p></section><section id="how"><h2>How to return an item</h2><ul><li>Message us on WhatsApp or through the <a href="contact.html">contact page</a> with your order number and the reason for the return.</li><li>We confirm the return and arrange collection or share the return address.</li><li>Once the item reaches us, we inspect it, usually within 2 working days.</li></ul></section><section id="refunds"><h2>Refunds</h2><p>Approved refunds are sent by bank transfer to the account you paid from, normally within 5–7 working days of inspection. We will confirm on WhatsApp when the refund has been sent.</p></section><section id="exchange"><h2>Exchanges</h2><p>If you would prefer a different model or colour, we can exchange your item. If the new item costs more, you pay the difference; if it costs less, we refund the difference.</p></section>
+      <div class="lg-help"><p>Questions about an order, a return or a warranty claim? Our team is happy to help.</p>
+        <a class="btn btn-rose" href="contact.html">Contact us <span class="arrow-c">↗</span></a></div>
+    </article>
   </div>
-</section>
+</main>
 
-<!-- ===================== WHO WE SERVE (added section) ===================== -->
-<section class="serve">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="rv">Who we <span class="accent">serve</span></h2>
-      <p class="rv d1">One store, three kinds of customers — each with the right Chromebook and the right support.</p>
-    </div>
-    <div class="serve-list">
-      <div class="serve-row rv">
-        <div class="serve-media"><img src="assets/about-coding.jpg" alt="Student working on a laptop"><span class="num">01</span></div>
-        <div class="serve-text">
-          <span class="cat">STUDENTS &amp; FAMILIES</span>
-          <h3>Bring your own device</h3>
-          <p>School-approved Chromebooks for BYOD programmes — fast, secure, and ready for class on day one.</p>
-          <ul><li>Google-verified devices with official warranty</li><li>Automatic updates supported until 2031</li><li>Free nationwide delivery, 7-day money-back</li></ul>
-          <a class="btn btn-rose btn-sm" href="shop-v18.html">Shop Chromebooks <span class="arrow-c">↗</span></a>
-        </div>
-      </div>
-      <div class="serve-row flip rv">
-        <div class="serve-media"><img src="assets/about-teacher.jpg" alt="Teacher guiding students on a Chromebook"><span class="num">02</span></div>
-        <div class="serve-text">
-          <span class="cat">SCHOOLS &amp; INSTITUTIONS</span>
-          <h3>Whole-school deployments</h3>
-          <p>Bulk devices, Google Workspace for Education, and teacher training — delivered as one programme.</p>
-          <ul><li>Trusted by Beaconhouse, LGS, and The Millennium Education</li><li>Demo units and pilot programmes available</li><li>Dedicated support before and after rollout</li></ul>
-          <a class="btn btn-rose btn-sm" href="contact-v18.html">Book a demo <span class="arrow-c">↗</span></a>
-        </div>
-      </div>
-      <div class="serve-row rv">
-        <div class="serve-media"><img src="assets/about-developer.jpg" alt="Professional at a multi-screen workstation"><span class="num">03</span></div>
-        <div class="serve-text">
-          <span class="cat">BUSINESSES &amp; TEAMS</span>
-          <h3>Work from anywhere</h3>
-          <p>Secure, cloud-first laptops for organisations that want simple management and zero maintenance.</p>
-          <ul><li>Chromebook Plus models for power users</li><li>Central management with Google Workspace</li><li>Volume pricing for teams</li></ul>
-          <a class="btn btn-rose btn-sm" href="contact-v18.html">Talk to us <span class="arrow-c">↗</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== TECH VALLEY (added section 2) ===================== -->
-<section class="tv">
-  <div class="wrap">
-    <div class="tv-grid">
-      <div class="tv-copy rv">
-        <span class="hero-kicker">The company behind the store</span>
-        <h2>Powered by <span class="accent">Tech Valley</span></h2>
-        <p>MyChromebook.pk is the Chromebook store of Tech Valley — Pakistan's digital transformation and professional development partner, and an official Google for Education and ChromeOS partner in the country.</p>
-        <p>Tech Valley works with school networks, universities, and government bodies to bring verified devices, Google Workspace for Education, and teacher training together — so technology actually reaches the classroom.</p>
-        <p>Together with Allied and NRTC, Tech Valley launched Pakistan's first Chromebook assembly line — the beginning of Chromebooks made in Pakistan.</p>
-        <a class="btn btn-rose btn-sm" href="contact-v18.html" style="margin-top:8px">Talk to the team <span class="arrow-c">↗</span></a>
-      </div>
-      <div class="tv-logos rv d1">
-        <div><img src="https://mychromebook.pk/wp-content/uploads/2025/06/GfE-Partner-Badges-Horizontal-Png-e1751278630886.png" alt="Google for Education Partner"></div>
-        <div><img src="https://mychromebook.pk/wp-content/uploads/2025/06/Google_Cloud_Partner_outline_horizontal-e1751278555230.png" alt="Google Cloud Partner"></div>
-        <div><img src="https://mychromebook.pk/wp-content/uploads/2025/06/Asset-2-scaled.png" alt="Chromebook"></div>
-        <div><img src="https://mychromebook.pk/wp-content/uploads/2025/06/NRTC-Logo-new-copy1.png" alt="NRTC"></div>
-        <div><img src="https://mychromebook.pk/wp-content/uploads/2025/06/Allied-Logo-scaled.png" alt="Allied"></div>
-        <div><img src="https://mychromebook.pk/wp-content/uploads/2025/06/ctl.png" alt="CTL"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CTA ===================== -->
-<section class="cta">
-  <div class="wrap">
-    <div class="cta-panel rv">
-      <div class="cta-left">
-        <h2>Ready to explore <span class="accent">our products?</span></h2>
-        <p>Genuine devices, official warranty, free delivery. Find the right Chromebook for your classroom, office, or home &#8212; or book a free demo and let our team match the right device to your needs.</p>
-        <div class="cta-btns">
-          <a class="btn btn-rose" href="shop-v18.html">Go to shop <span class="arrow-c">↗</span></a>
-          <a class="btn btn-metal" href="contact-v18.html?topic=demo">Book a Demo</a>
-        </div>
-      </div>
-      <div class="cta-right"><img src="assets/lenovo-500e-grey.jpg" alt="Grey Chromebook" style="border-radius:22px"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FOOTER — glossy metallic ===================== -->
 <footer>
   <div class="f-shine"></div>
   <div class="wrap">
@@ -642,20 +513,20 @@ footer li a:hover{color:var(--rose-deep)}
       <div>
         <h4>Visit</h4>
         <ul>
-          <li><a href="home-v18.html">Home</a></li>
-          <li><a href="about-v18.html">About us</a></li>
-          <li><a href="shop-v18.html">Shop</a></li>
-          <li><a href="blog-v18.html">Blog</a></li>
-          <li><a href="contact-v18.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="account-v18.html">My account</a></li>
-          <li><a href="order-v18.html">Track an order</a></li>
-          <li><a href="#">Terms &amp; conditions</a></li>
-          <li><a href="https://mychromebook.pk/refund-return-policy/">Refund &amp; returns policy</a></li>
+          <li><a href="account.html">My account</a></li>
+          <li><a href="order.html">Track an order</a></li>
+          <li><a href="terms.html">Terms &amp; conditions</a></li>
+          <li><a href="refund.html">Refund &amp; returns policy</a></li>
         </ul>
       </div>
       <div>
@@ -668,7 +539,7 @@ footer li a:hover{color:var(--rose-deep)}
       </div>
     </div>
     <div class="f-bottom">
-      <span>© 2026 MyChromebook.pk. All rights reserved. <a href="admin-v18.html" style="opacity:.55;margin-left:8px">Staff login</a></span>
+      <span>© 2026 MyChromebook.pk. All rights reserved.<a class="staff-link" href="admin.html"><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Staff login</a></span>
       <div class="f-social">
         <a href="https://www.instagram.com/mychromebookpakistan" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8 0-3.2 0-3.6.1-4.8.1-3.2 1.7-4.8 4.9-4.9 1.2-.1 1.6-.1 4.8-.1zm0 3.7a6.1 6.1 0 1 0 0 12.2 6.1 6.1 0 0 0 0-12.2zm0 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.2a1.4 1.4 0 1 1-2.9 0 1.4 1.4 0 0 1 2.9 0z"/></svg></a>
         <a href="https://www.linkedin.com/showcase/my-chromebook/about/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1s2.48 1.1 2.48 2.5zM.2 8h4.6v14.8H.2V8zm7.6 0h4.4v2h.1c.6-1.2 2.1-2.4 4.4-2.4 4.7 0 5.5 3.1 5.5 7.1v8.1h-4.6v-7.2c0-1.7 0-3.9-2.4-3.9s-2.8 1.9-2.8 3.8v7.3H7.8V8z"/></svg></a>
@@ -685,9 +556,9 @@ footer li a:hover{color:var(--rose-deep)}
 </div>
 
 <!-- store: settings, products, cart/wishlist/search engine -->
-<script src="assets/js/site-config.js?v=6"></script>
-<script src="assets/js/products.js?v=6"></script>
-<script src="assets/js/store.js?v=6"></script>
+<script src="assets/js/site-config.js?v=7"></script>
+<script src="assets/js/products.js?v=7"></script>
+<script src="assets/js/store.js?v=7"></script>
 <script>
 // ===== rotating hero decks =====
 (function(){
@@ -732,17 +603,26 @@ footer li a:hover{color:var(--rose-deep)}
     setInterval(()=>{imgs[i].classList.remove('on');dots[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on');dots[i].classList.add('on');},3200);
   });
 })();
-// ===== About: parallax layers follow the cursor =====
+// ===== shop filters =====
 (function(){
-  const v=document.getElementById('abVisual'); if(!v) return;
-  if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
-  const layers=[...v.querySelectorAll('.ab-layer')];
-  const base=l=>l.classList.contains('ab-main')?'rotate(2deg)':l.classList.contains('ab-sub')?'rotate(-5deg)':'';
-  v.addEventListener('mousemove',e=>{
-    const r=v.getBoundingClientRect(); const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-    layers.forEach(l=>{const d=+l.dataset.depth||10; l.style.transform=`translate(${(x*d).toFixed(1)}px,${(y*d).toFixed(1)}px) ${base(l)}`;});
+  const f=document.getElementById('filters'), sf=document.getElementById('subfilters'); if(!f) return;
+  const secs=[...document.querySelectorAll('.sh-sec')], items=[...document.querySelectorAll('.b-item[data-cat]')], heads=[...document.querySelectorAll('.sh-sub')];
+  const pop=els=>els.forEach(el=>{el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');});
+  f.addEventListener('click',e=>{const t=e.target.closest('[data-f]'); if(!t) return; e.preventDefault();
+    f.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active');
+    const v=t.dataset.f; sf.style.display=v==='accessories'?'flex':'none';
+    secs.forEach(s=>s.classList.toggle('hide',!(v==='all'||s.dataset.sec===v)));
+    items.forEach(i=>i.classList.remove('hide')); heads.forEach(h=>h.style.display='');
+    sf.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); sf.querySelector('[data-s="all"]').classList.add('active');
+    pop(items.filter(i=>!i.closest('.sh-sec').classList.contains('hide'))); document.getElementById('filters').scrollIntoView({behavior:'smooth',block:'start'});
   });
-  v.addEventListener('mouseleave',()=>layers.forEach(l=>{l.style.transform=base(l);}));
+  sf.addEventListener('click',e=>{const t=e.target.closest('[data-s]'); if(!t) return; e.preventDefault();
+    sf.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active');
+    const v=t.dataset.s;
+    items.forEach(i=>{ if(i.dataset.cat!=='accessories') return; i.classList.toggle('hide',!(v==='all'||i.dataset.sub===v)); });
+    heads.forEach(h=>h.style.display=(v==='all'||h.dataset.subhead===v)?'':'none');
+    pop(items.filter(i=>!i.classList.contains('hide')&&i.dataset.cat==='accessories'));
+  });
 })();
 // reveal on scroll
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});

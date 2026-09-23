@@ -4,6 +4,11 @@
    so every new screen matches the approved design.
    ============================================================================= */
 
+/* ---------------------------------------------------------------- page edges
+   The home hero's card stacks animate in from off-screen, which let visitors
+   scroll the whole page sideways (in the original design too). Clip it. */
+html,body{overflow-x:clip}
+
 /* ---------------------------------------------------------------- header icons */
 .nav-icons{align-items:center}
 .icon-c{position:relative;cursor:pointer}
@@ -289,3 +294,12 @@
   .li,.ok-mark,.ok-mark svg,.tl li.now i,.sr-drop.open{animation:none}
   .ok-mark svg{stroke-dashoffset:0}
 }
+
+/* ---------------------------------------------------------------- staff login (footer) */
+.staff-link{display:inline-flex;align-items:center;gap:7px;margin-left:14px;vertical-align:middle;
+  font-size:12.5px;font-weight:600;color:var(--graphite);background:#fff;border:1px solid rgba(255,255,255,.95);
+  border-radius:999px;padding:7px 14px 7px 11px;box-shadow:0 0 14px rgba(186,191,201,.5),0 4px 10px rgba(38,39,46,.06);
+  transition:transform .25s,box-shadow .25s}
+.staff-link:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(183,110,121,.25)}
+.staff-link svg{width:13px;height:13px;fill:none;stroke:var(--rose-deep);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:560px){.staff-link{margin:12px 0 0;display:flex;width:max-content}}

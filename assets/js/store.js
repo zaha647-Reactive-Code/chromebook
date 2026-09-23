@@ -334,8 +334,8 @@
   };
   var lineHTML = function (l) {
     return '<div class="li" data-line="' + esc(l.id) + '">' +
-      '<a class="li-img" href="product-v18.html?id=' + encodeURIComponent(l.id) + '"><img src="' + esc(l.p.image) + '" alt=""></a>' +
-      '<div><a class="li-name" href="product-v18.html?id=' + encodeURIComponent(l.id) + '">' + esc(l.p.name) + '</a>' +
+      '<a class="li-img" href="product.html?id=' + encodeURIComponent(l.id) + '"><img src="' + esc(l.p.image) + '" alt=""></a>' +
+      '<div><a class="li-name" href="product.html?id=' + encodeURIComponent(l.id) + '">' + esc(l.p.name) + '</a>' +
         '<span class="li-meta">' + money(l.p.price) + ' each</span></div>' +
       '<div class="li-side"><span class="li-price">' + money(l.line) + '</span>' +
         '<span class="qty"><button type="button" data-q="-1" aria-label="Less">−</button><span>' + l.qty + '</span>' +
@@ -356,14 +356,14 @@
         '<button class="cd-x" type="button" aria-label="Close cart">✕</button></div>' +
       (items.length && free ? '<div class="cd-free">' + ICONS.truck + 'Free delivery on every order, anywhere in Pakistan.</div>' : '') +
       '<div class="cd-list">' + (items.length ? items.map(lineHTML).join('') :
-        emptyHTML('Your cart is empty', 'Browse Chromebooks and accessories, then add them here.', 'shop-v18.html', 'Go to shop')) + '</div>' +
+        emptyHTML('Your cart is empty', 'Browse Chromebooks and accessories, then add them here.', 'shop.html', 'Go to shop')) + '</div>' +
       (items.length ?
         '<div class="cd-foot">' +
           '<div class="cd-row"><span>Subtotal</span><span>' + money(cart.subtotal()) + '</span></div>' +
           '<div class="cd-row"><span>Delivery</span><span>' + (cart.delivery() ? money(cart.delivery()) : '<b class="sum-free">Free</b>') + '</span></div>' +
           '<div class="cd-row tot"><span>Total</span><span>' + money(cart.total()) + '</span></div>' +
-          '<div class="cd-btns"><a class="btn btn-metal" href="cart-v18.html">View cart</a>' +
-          '<a class="btn btn-rose" href="checkout-v18.html">Checkout</a></div>' +
+          '<div class="cd-btns"><a class="btn btn-metal" href="cart.html">View cart</a>' +
+          '<a class="btn btn-rose" href="checkout.html">Checkout</a></div>' +
         '</div>' : '');
     drawer.querySelector('.cd-x').addEventListener('click', closeDrawer);
   };
@@ -399,13 +399,13 @@
 
   /* ---- live search in the header ---- */
   var initSearch = function () {
-    document.querySelectorAll('form.searchbar').forEach(function (form) {
+    document.querySelectorAll('form.searchbar:not(.bl-search)').forEach(function (form) {
       var input = form.querySelector('input');
       if (!input) return;
-      form.setAttribute('action', 'shop-v18.html');
+      form.setAttribute('action', 'shop.html');
       input.setAttribute('name', 'q');
       input.setAttribute('autocomplete', 'off');
-      var cur = qs('q'); if (cur && /shop-v18\.html/.test(location.pathname)) input.value = cur;
+      var cur = qs('q'); if (cur && /shop\.html/.test(location.pathname)) input.value = cur;
       var drop = document.createElement('div'); drop.className = 'sr-drop'; drop.setAttribute('role', 'listbox');
       form.appendChild(drop);
       var act = -1, results = [];
@@ -424,11 +424,11 @@
         results = search(t, 6); act = -1;
         drop.innerHTML = results.length ?
           results.map(function (p, i) {
-            return '<a class="sr-item" role="option" data-i="' + i + '" href="product-v18.html?id=' + encodeURIComponent(p.id) + '">' +
+            return '<a class="sr-item" role="option" data-i="' + i + '" href="product.html?id=' + encodeURIComponent(p.id) + '">' +
               '<img src="' + esc(p.image) + '" alt=""><span><b>' + hl(p.name, t) + '</b>' +
               '<small>' + esc(p.stock === 'out' ? 'Sold out' : (p.category === 'refurb' ? 'Refurbished' : p.category === 'new' ? 'New Chromebook' : 'Accessory')) + '</small></span>' +
               '<span class="sr-price">' + money(p.price) + '</span></a>';
-          }).join('') + '<a class="sr-all" href="shop-v18.html?q=' + encodeURIComponent(t.trim()) + '">See all results for “' + esc(t.trim()) + '”</a>'
+          }).join('') + '<a class="sr-all" href="shop.html?q=' + encodeURIComponent(t.trim()) + '">See all results for “' + esc(t.trim()) + '”</a>'
           : '<div class="sr-empty">No products match “' + esc(t.trim()) + '”. Try “mouse”, “stylus” or “CTL”.</div>';
         drop.classList.add('open');
       };
@@ -443,7 +443,7 @@
         else if (e.key === 'ArrowUp') { e.preventDefault(); act = Math.max(-1, act - 1); mark(); }
         else if (e.key === 'Escape') { drop.classList.remove('open'); }
         else if (e.key === 'Enter' && act > -1 && results[act]) {
-          e.preventDefault(); location.href = 'product-v18.html?id=' + encodeURIComponent(results[act].id);
+          e.preventDefault(); location.href = 'product.html?id=' + encodeURIComponent(results[act].id);
         }
       });
       form.addEventListener('submit', function (e) { if (!input.value.trim()) e.preventDefault(); });
@@ -456,7 +456,7 @@
     document.addEventListener('click', function (e) {
       /* header cart icon opens the drawer (except on the cart page itself) */
       var ci = e.target.closest('[data-mc="cart"]');
-      if (ci && !/cart-v18\.html/.test(location.pathname)) { e.preventDefault(); openDrawer(); return; }
+      if (ci && !/cart\.html/.test(location.pathname)) { e.preventDefault(); openDrawer(); return; }
 
       /* wishlist hearts on cards */
       var h = e.target.closest('.b-heart');
@@ -468,7 +468,7 @@
           var p = product(host.dataset.id);
           h.classList.remove('pulse'); void h.offsetWidth; h.classList.add('pulse');
           toast({ img: p && p.image, text: added ? 'Saved to your wishlist' : 'Removed from wishlist',
-                  link: added ? 'wishlist-v18.html' : '', linkText: 'View wishlist' });
+                  link: added ? 'wishlist.html' : '', linkText: 'View wishlist' });
         }
         return;
       }
@@ -482,14 +482,14 @@
         if (cart.add(card.dataset.id, 1)) {
           qa.classList.add('done'); qa.innerHTML = ICONS.check + '<span>Added</span>';
           setTimeout(function () { qa.classList.remove('done'); qa.innerHTML = ICONS.bagPlus + '<span>Add to cart</span>'; }, 1600);
-          toast({ img: pr.image, text: pr.name + ' added to cart', link: 'cart-v18.html', linkText: 'View cart', onclick: 'drawer' });
+          toast({ img: pr.image, text: pr.name + ' added to cart', link: 'cart.html', linkText: 'View cart', onclick: 'drawer' });
         }
         return;
       }
 
       /* toast "View cart" opens the drawer instead of leaving the page */
       var ta = e.target.closest('.mc-toast a[data-act="drawer"]');
-      if (ta && !/cart-v18\.html/.test(location.pathname)) { e.preventDefault(); toastEl.classList.remove('show'); openDrawer(); }
+      if (ta && !/cart\.html/.test(location.pathname)) { e.preventDefault(); toastEl.classList.remove('show'); openDrawer(); }
     });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDrawer(); });
   };
