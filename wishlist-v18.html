@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop — MyChromebook.pk</title>
+<title>Wishlist — MyChromebook.pk</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -413,6 +413,17 @@ footer li a:hover{color:var(--rose-deep)}
 .pd-stage .b-newpill{top:18px;left:18px}
 </style>
 <link rel="stylesheet" href="assets/css/store.css?v=6">
+<style>
+
+.wl-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.wl-bar span{font-size:14px;color:#5A5D68}
+.wl-bar .btn-sm{padding:10px 18px;font-size:13px}
+.wl-card .b-row{gap:8px}
+.wl-card .wl-rm{border:none;background:none;cursor:pointer;font-family:'Outfit',sans-serif;font-size:12px;color:#8A8D95;padding:4px 0;margin-top:10px;text-align:left}
+.wl-card .wl-rm:hover{color:var(--rose-deep)}
+.wl-card.out{animation:liOut .3s ease forwards}
+
+</style>
 </head>
 <body>
 
@@ -445,80 +456,27 @@ footer li a:hover{color:var(--rose-deep)}
   <div class="nav-tabs" id="navTabs">
     <a class="tab" href="home-v18.html">Home</a>
     <a class="tab" href="about-v18.html">About</a>
-    <a class="tab active" href="shop-v18.html">Shop</a>
+    <a class="tab" href="shop-v18.html">Shop</a>
     <a class="tab" href="blog-v18.html">Blog</a>
     <a class="tab" href="contact-v18.html">Contact</a>
   </div>
 </nav>
 
-<header class="sh-hero">
-  <span class="hero-kicker">MyChromebook.pk store</span>
-  <h1>Shop <span class="accent">Chromebooks &amp; accessories</span></h1>
-  <p>Verified devices, official warranty, free nationwide delivery — and everything that goes with your Chromebook.</p>
-  <div class="filters" id="filters">
-    <a class="tab active" data-f="all" href="#">All</a>
-    <a class="tab" data-f="new" href="#">New Chromebooks</a>
-    <a class="tab" data-f="refurb" href="#">Refurbished</a>
-    <a class="tab" data-f="accessories" href="#">Accessories</a>
-  </div>
-  <div class="subfilters" id="subfilters" style="display:none">
-    <a class="tab active" data-s="all" href="#">All accessories</a>
-    <a class="tab" data-s="audio" href="#">Audio</a>
-    <a class="tab" data-s="mice" href="#">Mice &amp; Keyboards</a>
-    <a class="tab" data-s="stylus" href="#">Stylus &amp; Wearables</a>
-    <a class="tab" data-s="sleeves" href="#">Sleeves &amp; Chargers</a>
-  </div>
+<header class="pg-hero">
+  <span class="hero-kicker">Saved for later</span>
+  <h1>Your <span class="accent">wishlist</span></h1>
+  <p id="wishLead">Everything you have saved in one place. Move items to your cart whenever you are ready.</p>
 </header>
 
-<section class="sh-sec" data-sec="new" id="new">
-  <div class="wrap">
-    <div class="sh-head"><div><h2>New <span class="accent">Chromebooks</span></h2><p>Centerm, Allied, and CTL — Google-verified with automatic updates until June 2031.</p></div><span class="count">4 models</span></div>
-    <div class="grid4">
-    </div>
+<main class="pg">
+  <div class="wl-bar" id="wishBar" style="display:none">
+    <span id="wishCount"></span>
+    <button type="button" class="btn btn-rose btn-sm" id="wishAll">Move all to cart</button>
   </div>
-</section>
+  <div class="grid4" id="wishGrid"></div>
+  <div class="panel" id="wishEmpty" style="display:none"></div>
+</main>
 
-<section class="sh-sec" data-sec="refurb" id="refurb">
-  <div class="wrap">
-    <div class="sh-head"><div><h2>Refurbished <span class="accent">Chromebooks</span></h2><p>Certified CTL devices — fully tested, verified, and budget-friendly.</p></div><span class="count">3 models</span></div>
-    <div class="grid4">
-    </div>
-  </div>
-</section>
-
-<section class="sh-sec" data-sec="accessories" id="accessories">
-  <div class="wrap">
-    <div class="sh-head"><div><h2>Accessories</h2><p>Audio, mice and keyboards, stylus and wearables, sleeves and chargers.</p></div><span class="count">17 items</span></div>
-    <div class="sh-sub" data-subhead="audio">AUDIO</div>
-    <div class="grid4">
-    </div>
-    <div class="sh-sub" data-subhead="mice">MICE &amp; KEYBOARDS</div>
-    <div class="grid4">
-    </div>
-    <div class="sh-sub" data-subhead="stylus">STYLUS &amp; WEARABLES</div>
-    <div class="grid4">
-    </div>
-    <div class="sh-sub" data-subhead="sleeves">SLEEVES &amp; CHARGERS</div>
-    <div class="grid4">
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CTA ===================== -->
-<section class="cta">
-  <div class="wrap">
-    <div class="cta-panel rv">
-      <div class="cta-left">
-        <h2>Need help <span class="accent">choosing?</span></h2>
-        <p>Book a free demo and our team will match the right Chromebook and accessories to your school, office, or home.</p>
-        <a class="btn btn-rose" href="contact-v18.html">Book a Demo <span class="arrow-c">↗</span></a>
-      </div>
-      <div class="cta-right"><img src="assets/lenovo-500e-grey.jpg" alt="Grey Chromebook" style="border-radius:22px"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FOOTER — glossy metallic ===================== -->
 <footer>
   <div class="f-shine"></div>
   <div class="wrap">
@@ -581,7 +539,6 @@ footer li a:hover{color:var(--rose-deep)}
 <script src="assets/js/site-config.js?v=6"></script>
 <script src="assets/js/products.js?v=6"></script>
 <script src="assets/js/store.js?v=6"></script>
-<script src="assets/js/shop-render.js?v=6"></script>
 <script>
 // ===== rotating hero decks =====
 (function(){
@@ -664,6 +621,75 @@ document.querySelectorAll('.v-card').forEach(c=>{
 });
 document.getElementById('lbClose').addEventListener('click',()=>{lb.classList.remove('open');lbFrame.innerHTML=''});
 lb.addEventListener('click',e=>{if(e.target===lb){lb.classList.remove('open');lbFrame.innerHTML=''}});
+</script>
+<script>
+
+(function () {
+  if (!window.MC) return;
+  var grid  = document.getElementById('wishGrid');
+  var empty = document.getElementById('wishEmpty');
+  var bar   = document.getElementById('wishBar');
+  var esc = MC.esc;
+
+  var card = function (p, i) {
+    var delay = ['', 'd1', 'd2', 'd3'][i % 4];
+    var link = 'product-v18.html?id=' + encodeURIComponent(p.id);
+    var sold = p.stock === 'out';
+    return '<article class="b-item wl-card rv in ' + delay + '" data-id="' + esc(p.id) + '">' +
+      '<div class="b-img">' +
+        (sold ? '<span class="b-tagpill">SOLD OUT</span>' : '') +
+        '<span class="b-heart on" title="Remove from wishlist">' + MC.ICONS.heart + '</span>' +
+        '<a href="' + link + '"><img src="' + esc(p.image) + '" alt="' + esc(p.name) + '"></a>' +
+      '</div>' +
+      '<div class="b-body">' +
+        '<h3><a href="' + link + '" style="color:inherit">' + esc(p.name) + '</a></h3>' +
+        '<p class="desc">' + esc(p.short) + '</p>' +
+        '<div class="b-row"><span class="price-pill">' + MC.money(p.price) + '</span>' +
+          (sold ? '<span class="btn btn-metal btn-sm">Sold out</span>'
+                : '<button type="button" class="btn btn-rose btn-sm" data-move>Move to cart</button>') +
+        '</div>' +
+        '<button type="button" class="wl-rm" data-rm>Remove</button>' +
+      '</div></article>';
+  };
+
+  var paint = function () {
+    var list = MC.wish.ids().map(MC.product).filter(Boolean);
+    if (!list.length) {
+      grid.innerHTML = ''; bar.style.display = 'none'; empty.style.display = '';
+      empty.innerHTML = MC.emptyHTML('Nothing saved yet',
+        'Tap the heart on any product to save it here for later.', 'shop-v18.html', 'Browse products', MC.ICONS.heart);
+      return;
+    }
+    empty.style.display = 'none'; bar.style.display = '';
+    document.getElementById('wishCount').textContent = list.length + (list.length === 1 ? ' saved product' : ' saved products');
+    grid.innerHTML = list.map(card).join('');
+  };
+
+  grid.addEventListener('click', function (e) {
+    var c = e.target.closest('[data-id]'); if (!c) return;
+    var id = c.dataset.id, p = MC.product(id);
+    if (e.target.closest('[data-move]')) {
+      if (MC.cart.add(id, 1)) {
+        c.classList.add('out');
+        setTimeout(function () { MC.wish.remove(id); }, 260);
+        MC.toast({ img: p.image, text: p.name + ' moved to cart', link: 'cart-v18.html', linkText: 'View cart', onclick: 'drawer' });
+      }
+    } else if (e.target.closest('[data-rm]')) {
+      c.classList.add('out');
+      setTimeout(function () { MC.wish.remove(id); }, 260);
+    }
+  });
+
+  document.getElementById('wishAll').addEventListener('click', function () {
+    var moved = 0;
+    MC.wish.ids().forEach(function (id) { if (MC.cart.add(id, 1)) { MC.wish.remove(id); moved++; } });
+    if (moved) MC.openDrawer();
+  });
+
+  window.addEventListener('mc:change', paint);
+  paint();
+})();
+
 </script>
 </body>
 </html>

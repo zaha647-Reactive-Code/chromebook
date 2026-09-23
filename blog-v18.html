@@ -431,6 +431,7 @@ footer li a:hover{color:var(--rose-deep)}
 @media(max-width:1080px){.bl-layout{grid-template-columns:1fr}.bl-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.bl-grid{grid-template-columns:1fr}.screen{height:440px}.a-cover{height:160px}.a-text{padding:16px 18px 0}.mon-neck{height:60px}.mon-base{width:220px}}
 </style>
+<link rel="stylesheet" href="assets/css/store.css?v=6">
 </head>
 <body>
 
@@ -454,6 +455,9 @@ footer li a:hover{color:var(--rose-deep)}
       <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
     </form>
     <div class="nav-icons">
+      <a class="icon-c" href="wishlist-v18.html" data-mc="wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><span class="ic-badge"></span></a>
+      <a class="icon-c" href="account-v18.html" data-mc="acct" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></a>
+      <a class="icon-c" href="cart-v18.html" data-mc="cart" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M6 7h12l1.5 12.5a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5L6 7z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg><span class="ic-badge"></span></a>
       <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -608,6 +612,10 @@ footer li a:hover{color:var(--rose-deep)}
   <div class="lb-frame" id="lbFrame"></div>
 </div>
 
+<!-- store: settings, products, cart/wishlist/search engine -->
+<script src="assets/js/site-config.js?v=6"></script>
+<script src="assets/js/products.js?v=6"></script>
+<script src="assets/js/store.js?v=6"></script>
 <script>
 // ===== rotating hero decks =====
 (function(){

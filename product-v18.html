@@ -545,6 +545,7 @@ footer li a:hover{color:var(--rose-deep)}
 /* the same tag on the product page, sitting on the main photo */
 .pd-stage .b-newpill{top:18px;left:18px}
 </style>
+<link rel="stylesheet" href="assets/css/store.css?v=6">
 </head>
 <body>
 
@@ -568,6 +569,9 @@ footer li a:hover{color:var(--rose-deep)}
       <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
     </form>
     <div class="nav-icons">
+      <a class="icon-c" href="wishlist-v18.html" data-mc="wish" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><span class="ic-badge"></span></a>
+      <a class="icon-c" href="account-v18.html" data-mc="acct" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg></a>
+      <a class="icon-c" href="cart-v18.html" data-mc="cart" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M6 7h12l1.5 12.5a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5L6 7z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg><span class="ic-badge"></span></a>
       <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -668,9 +672,10 @@ footer li a:hover{color:var(--rose-deep)}
   <div class="lb-frame" id="lbFrame"></div>
 </div>
 
-<!-- product catalogue: edit assets/js/products.js to change products -->
-<script src="assets/js/products.js?v=5"></script>
-<script src="assets/js/shop-render.js?v=5"></script>
+<!-- store: settings, products, cart/wishlist/search engine -->
+<script src="assets/js/site-config.js?v=6"></script>
+<script src="assets/js/products.js?v=6"></script>
+<script src="assets/js/store.js?v=6"></script>
 <script>
 // ===== rotating hero decks =====
 (function(){
@@ -856,7 +861,8 @@ lb.addEventListener('click',e=>{if(e.target===lb){lb.classList.remove('open');lb
           '</div>') +
         (soldOut
           ? '<span class="btn btn-metal">Sold out</span>'
-          : '<a class="btn btn-rose" href="#" id="pdBuy">Add to cart <span class="arrow-c">↗</span></a>') +
+          : '<button class="btn btn-rose" type="button" id="pdBuy">Add to cart <span class="arrow-c">↗</span></button>' +
+            '<button class="btn btn-metal" type="button" id="pdNow">Buy now</button>') +
         '<button class="pd-fav" type="button" id="pdFav" title="Add to wishlist" aria-label="Add to wishlist">' +
           '<svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>' +
         '</button>' +
@@ -950,7 +956,36 @@ lb.addEventListener('click',e=>{if(e.target===lb){lb.classList.remove('open');lb
     document.getElementById('pdPlus').addEventListener('click',  function () { step(1);  });
   }
   var fav = document.getElementById('pdFav');
-  if (fav) fav.addEventListener('click', function () { fav.classList.toggle('on'); });
+  var paintFav = function () {
+    if (!fav || !window.MC) return;
+    var on = MC.wish.has(p.id);
+    fav.classList.toggle('on', on);
+    fav.setAttribute('title', on ? 'Saved to wishlist' : 'Add to wishlist');
+  };
+  if (fav) fav.addEventListener('click', function () {
+    if (!window.MC) return;
+    var added = MC.wish.toggle(p.id);
+    MC.toast({ img: p.image, text: added ? 'Saved to your wishlist' : 'Removed from wishlist',
+               link: added ? 'wishlist-v18.html' : '', linkText: 'View wishlist' });
+  });
+  window.addEventListener('mc:change', paintFav);
+  paintFav();
+
+  var qtyNow = function () { return q ? Math.max(1, parseInt(q.value, 10) || 1) : 1; };
+  var buy = document.getElementById('pdBuy');
+  if (buy) buy.addEventListener('click', function () {
+    if (!window.MC) return;
+    if (MC.cart.add(p.id, qtyNow())) {
+      buy.innerHTML = 'Added <span class="arrow-c">✓</span>';
+      setTimeout(function () { buy.innerHTML = 'Add to cart <span class="arrow-c">↗</span>'; }, 1500);
+      MC.openDrawer();
+    }
+  });
+  var now = document.getElementById('pdNow');
+  if (now) now.addEventListener('click', function () {
+    if (!window.MC) return;
+    if (MC.cart.add(p.id, qtyNow())) location.href = 'checkout-v18.html';
+  });
 
   /* ================= specification table ================= */
   var LABELS = [
@@ -988,7 +1023,7 @@ lb.addEventListener('click',e=>{if(e.target===lb){lb.classList.remove('open');lb
   if (rel.length) {
     document.getElementById('pdRelated').innerHTML = rel.map(function (r, i) {
       var delay = ['', 'd1', 'd2', 'd3'][i % 4];
-      return '<article class="b-item rv ' + delay + '">' +
+      return '<article class="b-item rv ' + delay + '" data-id="' + esc(r.id) + '">' +
         '<a href="product-v18.html?id=' + encodeURIComponent(r.id) + '" style="display:block;color:inherit">' +
           '<div class="b-img">' +
             (r.tag ? '<span class="b-newpill">' + esc(r.tag) + '</span>' : '') +
