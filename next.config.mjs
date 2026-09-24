@@ -2,9 +2,12 @@
 
 // Security headers (report section 5.7). The Content Security Policy allows only
 // this site, Google Fonts and Firebase / Google APIs.
+// React needs eval() only while you test with "npm run dev". The live site never allows it.
+const isDev = process.env.NODE_ENV !== 'production';
+
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://apis.google.com https://www.gstatic.com https://www.googletagmanager.com",
+  "script-src 'self' 'unsafe-inline'" + (isDev ? " 'unsafe-eval'" : '') + " https://apis.google.com https://www.gstatic.com https://www.googletagmanager.com",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com data:",
   "img-src 'self' data: blob: https://firebasestorage.googleapis.com https://storage.googleapis.com https://*.googleusercontent.com https://i.ytimg.com",
@@ -30,6 +33,8 @@ const nextConfig = {
   poweredByHeader: false,
   images: {
     formats: ['image/webp'],
+    // Next.js 16 only allows the qualities listed here. The zoom and full-screen photos use 80 and 85.
+    qualities: [70, 75, 80, 85],
     remotePatterns: [
       { protocol: 'https', hostname: 'firebasestorage.googleapis.com' },
       { protocol: 'https', hostname: 'storage.googleapis.com' },
