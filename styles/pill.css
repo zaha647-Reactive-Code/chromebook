@@ -1,0 +1,20 @@
+
+/* ---- "Just in" marketing tag — only on hand-picked products ---- */
+.b-newpill{position:absolute;top:26px;left:26px;z-index:3;display:inline-flex;align-items:center;gap:6px;
+  font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;
+  background:linear-gradient(120deg,var(--rose-2),var(--rose-deep));
+  border-radius:999px;padding:7px 14px 7px 11px;overflow:hidden;
+  box-shadow:0 8px 20px rgba(183,110,121,.42),0 0 0 3px rgba(216,163,171,.18);
+  animation:npFloat 3.8s ease-in-out infinite}
+.b-newpill::after{content:"";position:absolute;top:0;left:-65%;width:45%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);
+  animation:npShine 3.8s ease-in-out infinite}
+.b-newpill svg{width:11px;height:11px;fill:#fff;flex:none;animation:npSpark 3.8s ease-in-out infinite}
+@keyframes npFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes npShine{0%{left:-65%}55%{left:125%}100%{left:125%}}
+@keyframes npSpark{0%,72%,100%{transform:scale(1);opacity:.9}80%{transform:scale(1.35);opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .b-newpill,.b-newpill::after,.b-newpill svg{animation:none}
+}
+/* the same tag on the product page, sitting on the main photo */
+.pd-stage .b-newpill{top:18px;left:18px}

@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "byod",
+    "title": "What is BYOD — and why Pakistani schools are adopting it",
+    "category": "BYOD",
+    "meta": "5 min read · Education",
+    "image": "/assets/blog-byod-girl.png",
+    "paragraphs": [
+      "Bring Your Own Device (BYOD) is a simple idea: every student learns on their own laptop instead of sharing a school computer lab. Lessons, homework, and research move onto one device the student carries from class to home and back again.",
+      "For schools, BYOD removes the bottleneck of a single lab and makes digital learning part of every subject rather than a weekly slot. For families, it means the device is a long-term investment — one that follows the child through the years.",
+      "The catch is that BYOD only works if the devices are reliable, secure, and easy to manage. That is exactly why Chromebooks have become the standard choice: they start in seconds, update themselves, and can be managed centrally by the school.",
+      "Networks such as Beaconhouse now publish approved Chromebook lists for their BYOD programmes. Buying a verified device from the approved list means it will work with the school's systems from day one."
+    ]
+  },
+  {
+    "slug": "why",
+    "title": "Why buy a Chromebook? Speed, security, and simplicity",
+    "category": "GUIDE",
+    "meta": "4 min read · Guide",
+    "image": "/assets/blog-chromebooks-trio.webp",
+    "paragraphs": [
+      "A Chromebook is built around one principle: it should just work. Open the lid and you are at your desk in seconds. There is no waiting for updates, no antivirus to renew, and no slow-down after a year of use.",
+      "Security is handled by ChromeOS itself. Every app runs in its own sandbox, the system verifies itself on every boot, and updates arrive automatically in the background. Verified Chromebooks sold by MyChromebook.pk receive these updates for years — each product page shows how long.",
+      "Because everything is saved to Google Drive, a lost or broken device does not mean lost work — sign in on another Chromebook and everything is exactly where you left it.",
+      "Add long battery life, a lightweight body, and an affordable price, and it is easy to see why students, teachers, and businesses across Pakistan are choosing Chromebooks over conventional laptops."
+    ]
+  },
+  {
+    "slug": "classroom",
+    "title": "Chromebooks in the classroom: how a school rollout actually works",
+    "category": "CLASSROOM",
+    "meta": "6 min read · Schools",
+    "image": "/assets/blog-classroom-kids.png",
+    "paragraphs": [
+      "A successful Chromebook rollout is a programme, not a purchase. It starts with a pilot: a few classes, a few dozen devices, and teachers who volunteer to try the new way of working first.",
+      "Next comes management. With Google Workspace for Education, the school's IT team can set up every device from one dashboard — pre-installing apps, setting safe-browsing rules, and pushing updates without touching a single laptop.",
+      "Teacher training is the step schools most often underestimate. Tech Valley's programmes pair devices with hands-on sessions so teachers are confident with Google Classroom, assignments, and assessment tools before students arrive.",
+      "Finally, support. Warranty, replacements, and a helpline matter more in a school of 800 devices than in a home of one — which is why institutions buy from an official partner rather than the grey market."
+    ]
+  },
+  {
+    "slug": "genuine",
+    "title": "Genuine or grey-market? How to spot a real Chromebook",
+    "category": "BUYING TIPS",
+    "meta": "4 min read · Buying tips",
+    "image": "/assets/blog-beaconhouse-classroom.png",
+    "paragraphs": [
+      "Pakistan's laptop market is full of devices sold as Chromebooks that are anything but — refurbished units sold as new, models with expired update support, or imports with no warranty at all.",
+      "Start with the update date. Every Chromebook model has an official Auto Update Expiration date. A device that stops receiving updates next year will stop receiving security fixes, new features, and eventually access to some apps.",
+      "Check for an official warranty from the brand or its authorised partner in Pakistan. A seller who cannot show one is selling a device that nobody will stand behind.",
+      "Buy from a Google for Education partner. MyChromebook.pk sells only verified devices from Allied, CTL, and Centerm — with official warranty, free delivery, and a 7-day money-back guarantee."
+    ]
+  }
+]

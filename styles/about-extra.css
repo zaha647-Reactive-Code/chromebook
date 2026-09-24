@@ -1,0 +1,4 @@
+
+.cta-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+@media(max-width:560px){.cta-btns{flex-direction:column;align-items:stretch}
+  .cta-btns .btn{justify-content:center}}
