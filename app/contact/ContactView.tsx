@@ -23,7 +23,7 @@ export default function ContactView({ supportHours, email, phoneDisplay, demo }:
     setState('busy');
     try {
       const r = await fetch('/api/contact', { method: 'POST', headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ ...f, website: (document.getElementById('ct-website') as HTMLInputElement)?.value || '' }) });
+        body: JSON.stringify({ ...f }) });
       const d = await r.json().catch(() => ({}));
       if (!r.ok) { setErr(d.error || 'Your message could not be sent. Please email us instead.'); setState('idle'); return; }
       setState('sent');
@@ -69,7 +69,6 @@ export default function ContactView({ supportHours, email, phoneDisplay, demo }:
                       <select id="ctTopic" name="topic" value={f.topic} onChange={set('topic')}>{TOPICS.map((t) => <option key={t}>{t}</option>)}</select></div>
                     <div className="ct-field"><label htmlFor="ctMsg">Your message</label>
                       <textarea id="ctMsg" name="message" autoComplete="off" placeholder="Tell us what you need and we will guide you." value={f.message} onChange={set('message')} maxLength={2000} /></div>
-                    <input id="ct-website" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: -9999, width: 1, height: 1, opacity: 0 }} />
                     {err && <p className="ct-err">{err}</p>}
                     <div className="ct-actions">
                       <button className="btn btn-rose" type="submit" disabled={state === 'busy'}>{state === 'busy' ? 'Sending…' : <>Send message <span className="arrow-c">↗</span></>}</button>

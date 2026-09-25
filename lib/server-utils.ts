@@ -52,7 +52,7 @@ export const OrderInput = z.object({
     address: txt(8, 300),
     notes: z.string().trim().max(400).optional().default(''),
   }),
-  website: z.string().max(0).optional(),          // honeypot: real people leave it empty
+  website: z.any().optional(), // old spam-trap field: ignored (browser extensions filled it and blocked real customers)
 });
 
 export const ContactInput = z.object({
@@ -61,7 +61,7 @@ export const ContactInput = z.object({
   email: z.string().trim().toLowerCase().email().max(120),
   topic: txt(2, 60),
   message: txt(5, 2000),
-  website: z.string().max(0).optional(),
+  website: z.any().optional(),
 });
 
 export const LookupInput = z.object({

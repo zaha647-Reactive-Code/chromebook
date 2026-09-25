@@ -87,7 +87,7 @@ export default function CheckoutView({ buy, buyQty }: { buy: string; buyQty: num
       const r = await fetch('/api/orders', {
         method: 'POST',
         headers: { 'content-type': 'application/json', ...(token ? { authorization: 'Bearer ' + token } : {}) },
-        body: JSON.stringify({ items: okLines.map((l) => ({ id: l.id, qty: l.qty })), customer: f, website: (document.getElementById('co-website') as HTMLInputElement)?.value || '' }),
+        body: JSON.stringify({ items: okLines.map((l) => ({ id: l.id, qty: l.qty })), customer: f }),
       });
       const data = await r.json().catch(() => ({}));
       if (r.status === 409 && data.problems) { setProblems(data.problems); setMsg(data.error); setBusy(false); return; }
@@ -161,7 +161,6 @@ export default function CheckoutView({ buy, buyQty }: { buy: string; buyQty: num
                   <div className="err">{ERR.address}</div></div>
                 <div className="f"><label htmlFor="co-notes">Order notes <span style={{ fontWeight: 400, color: '#8A8D95' }}>(optional)</span></label>
                   <input id="co-notes" name="notes" autoComplete="off" placeholder="Anything we should know — e.g. call before delivery" value={f.notes} onChange={set('notes')} maxLength={400} /></div>
-                <input id="co-website" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: -9999, width: 1, height: 1, opacity: 0 }} />
               </div>
 
               <div className="panel">
