@@ -53,9 +53,15 @@ export async function getProducts({ includeHidden = false } = {}): Promise<Produ
     warnSeed();
     return (seed as any[]).map((p, i) => ({ ...normalise(p.id, p), sort: i } as any)).sort(sortProducts);
   }
-  const snap = await adminDb().collection('products').get();
-  const list = snap.docs.map((d) => ({ ...normalise(d.id, d.data()), sort: d.data().sort } as any));
-  return list.filter((p) => includeHidden || p.active).sort(sortProducts);
+  try {
+    const snap = await adminDb().collection('products').get();
+    const list = snap.docs.map((d) => ({ ...normalise(d.id, d.data()), sort: d.data().sort } as any));
+    return list.filter((p) => includeHidden || p.active).sort(sortProducts);
+  } catch (e) {
+    // never take the whole site down: show the seed catalogue and log the reason
+    console.error('[catalog] could not read products from Firestore — showing seed products. Check FIREBASE_SERVICE_ACCOUNT.', e);
+    return (seed as any[]).map((p, i) => ({ ...normalise(p.id, p), sort: i } as any)).sort(sortProducts);
+  }
 }
 
 export async function getProduct(id: string): Promise<Product | null> {
@@ -64,10 +70,16 @@ export async function getProduct(id: string): Promise<Product | null> {
     const p = (seed as any[]).find((x) => x.id === id);
     return p ? normalise(p.id, p) : null;
   }
-  const d = await adminDb().collection('products').doc(id).get();
-  if (!d.exists) return null;
-  const p = normalise(d.id, d.data());
-  return p.active ? p : null;
+  try {
+    const d = await adminDb().collection('products').doc(id).get();
+    if (!d.exists) return null;
+    const p = normalise(d.id, d.data());
+    return p.active ? p : null;
+  } catch (e) {
+    console.error('[catalog] could not read product ' + id + ' from Firestore', e);
+    const p = (seed as any[]).find((x) => x.id === id);
+    return p ? normalise(p.id, p) : null;
+  }
 }
 
 export const DEFAULT_SETTINGS: StoreSettings = {

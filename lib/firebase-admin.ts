@@ -14,13 +14,27 @@ const usingEmulator = !!process.env.FIRESTORE_EMULATOR_HOST;
 let app: App | null = null;
 let reason = '';
 
+/* The key can be pasted as plain JSON, as JSON wrapped in quotes, or as base64
+   (base64 is the safest for hosting dashboards, which sometimes change quotes or line breaks). */
+function readKey(raw: string): any {
+  let t = raw;
+  if ((t.startsWith("'") && t.endsWith("'")) || (t.startsWith('"') && t.endsWith('"') && !t.startsWith('"{'))) t = t.slice(1, -1);
+  if (!t.startsWith('{')) {
+    try { const dec = Buffer.from(t, 'base64').toString('utf8').trim(); if (dec.startsWith('{')) t = dec; } catch {}
+  }
+  if (t.startsWith('"{')) { try { t = JSON.parse(t); } catch { t = t.slice(1, -1); } }
+  const creds = JSON.parse(t);
+  if (!creds.private_key || !creds.client_email) throw new Error('the key is missing private_key or client_email');
+  return creds;
+}
+
 function init(): App | null {
   if (app) return app;
   if (getApps().length) { app = getApps()[0]; return app; }
-  const raw = process.env.FIREBASE_SERVICE_ACCOUNT;
+  const raw = (process.env.FIREBASE_SERVICE_ACCOUNT_BASE64 || process.env.FIREBASE_SERVICE_ACCOUNT || '').trim();
   try {
-    if (raw && raw.trim()) {
-      const creds = JSON.parse(raw);
+    if (raw) {
+      const creds = readKey(raw);
       if (creds.private_key) creds.private_key = String(creds.private_key).replace(/\\n/g, '\n');
       app = initializeApp({
         credential: cert(creds),
